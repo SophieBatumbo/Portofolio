@@ -1,0 +1,15 @@
+<section>
+    <div class="presentation-desc">
+        <h2 class="title">{{ presentation.title }}</h2>
+        <p class="description">{{ presentation.description }}</p>
+        <span class="logos" >
+            <img src="assets/logos/github.png" alt="github link">
+            <img src="assets/logos/linkedin.png" alt="linkedin link">
+        </span>
+        <div class="buttons">
+            <app-button [action]="'Contact me'"></app-button>
+            <app-button [action]="'Download my resume'"></app-button>
+        </div>
+    </div>
+    <img class="presentation-illus" src="{{ presentation.illustrationPath }}" alt="{{ presentation.illustrationDesc }}">
+</section>

@@ -1,0 +1,21 @@
+nav {
+  display: flex;
+  justify-content: space-between ;
+  
+  .nav {
+    &-actions, &-logo {
+      margin: 16px 32px;
+    }
+    &-actions {
+      display:flex;
+      gap: 42px;
+
+      a {
+        text-decoration: none;
+        &:visited {
+          color : black;
+        }
+      }
+    }
+  }
+}

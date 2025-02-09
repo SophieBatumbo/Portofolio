@@ -1,0 +1,14 @@
+<section class="skills"> <a name="skills"></a>
+    <img class="skills-illus" src="{{ skills.illustrationPath }}" alt="{{ skills.illustrationDesc }}">
+    <div class="skills-desc">
+        <h2 class="title" *ngIf="skills.title">{{ skills.title }}</h2>
+        <div class="logos" >
+            <span *ngFor="let logo of skills.logos">
+                <img src="{{ logo.path }}" alt="">
+                <legend>{{ logo.legend }}</legend>
+            </span>
+        </div>
+        <ul class="skills-list"><li *ngFor="let skill of skills.skills_names"> {{ skill }} </li></ul>
+    </div>
+</section>
+
