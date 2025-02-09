@@ -1,0 +1,70 @@
+.card-exp {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid hsla(0,0%,83%,.397);
+  border-radius: 6px;
+  box-shadow: 0 10px 30px -15px #0003;
+
+  &:hover {
+    box-shadow: 0 20px 30px -10px #0003;
+  }
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#0006,#0003);
+    background-color: #a9735b;
+    filter: blur(0);
+    padding-top: 48px;
+    color: white;
+    border-radius: 6px 6px 0 0;
+    height: 5em;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+
+    > img {
+      width: 100px;
+      align-self: center;
+      position: relative;
+      object-fit: cover;
+      right: 0;
+      left: 0;
+      top: 1rem;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 50%;
+      line-height: normal;
+      box-shadow: 0 .5rem 1rem #0000004d;
+    }
+  }
+
+  &-body {
+    padding-top: 48px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    font-size: 18px;
+
+    .body-header {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+
+      > span:first-child {
+        font-size: 22px;
+      }
+    }
+
+    .body-desc {
+      padding: 0 24px;
+      color: #868e96;
+      text-align: center;
+      font-size: 19px;
+    }
+  }
+}

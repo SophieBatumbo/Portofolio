@@ -1,0 +1,11 @@
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .experiences {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+  }
+}

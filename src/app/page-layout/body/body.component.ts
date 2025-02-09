@@ -1,0 +1,41 @@
+import { Component } from '@angular/core';
+import { PresentationComponent } from "../../sections/presentation/presentation.component";
+import { DataService } from '../../services/data.service';
+import { Experience, Presentation, Project, Skills } from '../../models/model';
+import { WorkExperienceComponent } from "../../sections/work-experience/work-experience.component";
+import { SkillsComponent } from "../../sections/skills/skills.component";
+import { ProjectsComponent } from "../../sections/projects/projects.component";
+
+@Component({
+  selector: 'app-body',
+  standalone: true,
+  imports: [PresentationComponent, WorkExperienceComponent, SkillsComponent, ProjectsComponent],
+  templateUrl: './body.component.html',
+  styleUrl: './body.component.scss'
+})
+export class BodyComponent {
+
+  prensentationData!: Presentation;
+  skillsData!: Skills;
+  experienceData!: Experience[];
+  projectData!: Project[];
+  //educationData!: ;
+
+  constructor (private dataService: DataService) {}
+
+  ngOnInit(){
+    this.dataService.getPresentationData().subscribe(
+      (data) => this.prensentationData = data
+    );
+    this.dataService.getSkillsData().subscribe(
+      (data) => this.skillsData = data
+    );
+    this.dataService.getWorkExperienceData().subscribe(
+      (data) => this.experienceData = data
+    );
+    this.dataService.getProjectsData().subscribe(
+      (data) => this.projectData = data
+    );
+  }
+
+}

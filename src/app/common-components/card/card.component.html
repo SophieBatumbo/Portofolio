@@ -1,0 +1,12 @@
+<div class="card">
+    <span class="card-header">
+        <h2 class="title">{{ title }}</h2>
+        <img src="{{ logoPath }}" alt="project icon">
+    </span>
+    <div class="card-description">
+        <p>{{ description }}</p>
+        <ul>
+            <li *ngFor="let spotPoint of spotPoints">{{ spotPoint }}</li>
+        </ul>
+    </div>
+</div>
