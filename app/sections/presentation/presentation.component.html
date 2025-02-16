@@ -1,15 +1,16 @@
-<section>
-    <div class="presentation-desc">
-        <h2 class="title">{{ presentation.title }}</h2>
+<section><a name="presentation"></a>
+    <div class="presentation-desc" inViewport [treshold]="0.2">
+        <h1 class="title">{{ presentation.title }} <img src="../../../assets/icons/hand.svg" alt="hand icon"></h1>
         <p class="description">{{ presentation.description }}</p>
         <span class="logos" >
-            <img src="assets/logos/github.png" alt="github link">
-            <img src="assets/logos/linkedin.png" alt="linkedin link">
+            <a href="https://github.com/SophieBatumbo" target="_blank"><img class="git" src="assets/logos/github.png" alt="github link"></a>
+            <a href="https://www.linkedin.com/in/sophie-batumbo-4a288614b/" target="_blank"><img class="linkedin" src="assets/logos/linkedin.png" alt="linkedin link"></a>
         </span>
         <div class="buttons">
-            <app-button [action]="'Contact me'"></app-button>
-            <app-button [action]="'Download my resume'"></app-button>
+            <app-button [action]="'Contact me'" [mail]="true"></app-button>
+            <app-button [action]="'Download my resume'" [downloadFile]="downloadFile"></app-button>
         </div>
     </div>
-    <img class="presentation-illus" src="{{ presentation.illustrationPath }}" alt="{{ presentation.illustrationDesc }}">
+
+    <img class="presentation-illus" src="{{ presentation.illustrationPath }}" alt="{{ presentation.illustrationDesc }}" inViewport>
 </section>

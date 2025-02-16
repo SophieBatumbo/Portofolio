@@ -6,6 +6,48 @@ section {
   .experiences {
     display: flex;
     gap: 16px;
-    justify-content: space-between;
+
+    // BEWARE : here we add css to each experience card manually,so if you add anything think to actualize here or to make a function in JS
+    > :first-child.visible {
+      animation: fadeIn 1s 0s 1;
+      animation-fill-mode: forwards;
+    }
+    > :nth-child(2).visible {
+      animation: fadeIn 1s 1s 1;
+      animation-fill-mode: forwards;
+    }
+    > :nth-child(3).visible {
+      animation: fadeIn 1s 2s 1;
+      animation-fill-mode: forwards;
+    }
+    > :nth-child(4).visible {
+      animation: fadeIn 1s 3s 1;
+      animation-fill-mode: forwards;
+    }
+    > :nth-child(5).visible {
+      animation: fadeIn 1s 4s 1;
+      animation-fill-mode: forwards;
+    }
+    > :nth-child(6).visible {
+      animation: fadeIn 1s 5s 1;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  @media screen and (max-width: 1260px) {
+    &.exp-section{
+      align-items: center;
+    }
+
+    .experiences {
+      flex-wrap: wrap;
+      gap: 42px;
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    .experiences {
+      gap: 24px;
+    }
   }
 }

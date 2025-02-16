@@ -1,6 +1,6 @@
 <section class="skills"> <a name="skills"></a>
-    <img class="skills-illus" src="{{ skills.illustrationPath }}" alt="{{ skills.illustrationDesc }}">
-    <div class="skills-desc">
+   <img class="skills-illus" src="{{ skills.illustrationPath }}" alt="{{ skills.illustrationDesc }}" inViewport [treshold]="0.1">
+   <div class="skills-desc" inViewport [treshold]="0.05">
         <h2 class="title" *ngIf="skills.title">{{ skills.title }}</h2>
         <div class="logos" >
             <span *ngFor="let logo of skills.logos">

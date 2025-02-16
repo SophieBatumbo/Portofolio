@@ -1,3 +1,9 @@
+:host {
+  display: flex;
+  flex: 0 1 100%;
+  opacity: 0;
+}
+
 .card-exp {
   display: flex;
   flex-direction: column;
@@ -5,6 +11,7 @@
   border: 1px solid hsla(0,0%,83%,.397);
   border-radius: 6px;
   box-shadow: 0 10px 30px -15px #0003;
+  flex: 0 1 100%;
 
   &:hover {
     box-shadow: 0 20px 30px -10px #0003;
@@ -14,7 +21,7 @@
     display: flex;
     flex-direction: column;
     background: linear-gradient(#0006,#0003);
-    background-color: #a9735b;
+    background-color: lighten(#cf8770, 5%);
     filter: blur(0);
     padding-top: 48px;
     color: white;
@@ -38,6 +45,11 @@
       line-height: normal;
       box-shadow: 0 .5rem 1rem #0000004d;
     }
+
+    @media screen and (max-width: 760px) {
+      font-size: 20px;
+      padding-top: 36px;
+    }
   }
 
   &-body {
@@ -57,6 +69,10 @@
 
       > span:first-child {
         font-size: 22px;
+
+        @media screen and (max-width: 760px) {
+          font-size: 20px;
+        }
       }
     }
 
@@ -65,6 +81,23 @@
       color: #868e96;
       text-align: center;
       font-size: 19px;
+
+      @media screen and (max-width: 760px) {
+        font-size: 16px;
+      }
     }
+
+    @media screen and (max-width: 760px) {
+      font-size: 16px;
+      gap: 12px;
+      padding-bottom: 32px;
+      padding-top: 52px;
+    }
+  }
+}
+
+@media screen and (max-width: 1260px) and (min-width: 761px) {
+  :host {
+    flex: 0 1 45%;
   }
 }

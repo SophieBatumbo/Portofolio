@@ -1,11 +1,16 @@
 nav {
   display: flex;
   justify-content: space-between ;
+  font-size: 19px;
+  margin: 32px 0;
   
   .nav {
-    &-actions, &-logo {
-      margin: 16px 32px;
+    &-logo {
+      img {
+        width: 120px;
+      }
     }
+
     &-actions {
       display:flex;
       gap: 42px;
@@ -14,6 +19,28 @@ nav {
         text-decoration: none;
         &:visited {
           color : black;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    margin-top: 16px;
+
+    .nav {
+      &-logo {
+        img {
+          width: 80px;
+        }
+      }
+
+      &-actions {
+        content: url(../../../assets/layout/bar.png);
+        max-width: 36px;
+        max-height: 36px;
+
+        a {
+          display: none;
         }
       }
     }

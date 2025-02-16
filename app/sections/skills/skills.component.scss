@@ -7,6 +7,10 @@
     flex-direction: column;
     gap: 24px;
 
+    .title {
+      margin-top: 56px;
+    }
+
     .logos {
       display: flex;
       gap: 16px;
@@ -18,33 +22,104 @@
         justify-content: end;
       }
       img{
-        width: 32px;
+        width: 60px;
+        filter: grayscale(100%);
+
+        &:hover {
+          filter: none;
+        }
       }
       legend {
         font-size: 10px;
         color: #868e96 ;
       }
     }
+
+    &:not(.visible) {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+
+    &.visible {
+      animation-duration: 2s;
+      animation-name: slideInFromRight;
+      opacity: 1;
+      animation-fill-mode: forwards;
+    }
   }
+
   &-illus {
     display: flex;
-    width: auto;
+    width: 60%;
+
+    &:not(.visible) {
+      transform: translateX(-100%);
+    }
+
+    &.visible {
+      animation-duration: 2s;
+      animation-name: slideInFromLeft;
+      animation-fill-mode: forwards;
+    }
   }
+
   &-list {
     list-style-type: none;
     display: flex;
     flex-direction: column;
     gap: 12px;
     padding-left: 0;
+    font-size: 19px;
 
     > li {
       display: flex;
     }
     > li::before {
       display: block;
-      content: url(../../../assets/sparkles.svg);
-      width: 23px;
+      content: url(../../../assets/icons/decorator-circle-basic.svg);
+      width: 12px;
       padding-right: 8px;
+      flex-shrink: 0;
+    }
+  }
+
+  @media screen and (max-width: 1260px) {
+    flex-direction: column-reverse;
+    gap: 0;
+
+    &-desc {
+      height: auto;
+      align-items: center;
+
+      .title {
+        margin-top: 0;
+      }
+
+      .logos {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    &-illus {
+      width: 100%;
+    }
+
+    &-list {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    &-list {
+      text-align: center;
+    }
+  }
+
+  @media screen and (min-width: 1260px) {
+    &-list {
+      line-height: 48px;
     }
   }
 }
