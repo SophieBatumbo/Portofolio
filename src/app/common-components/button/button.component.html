@@ -1,3 +1,14 @@
-<button>
+
+<button *ngIf="downloadFile && !mail && action">
+    <a [href]="downloadFile.url" target="_blank" [download]="downloadFile.file">
+        {{ action }}
+    </a>
+</button>
+<button *ngIf="!downloadFile && !mail && action">
     {{ action }}
+</button>
+<button *ngIf="!downloadFile && mail && action">
+    <a href="mailto: sophie.bat@hotmail.fr">
+        {{ action }}
+    </a>
 </button>

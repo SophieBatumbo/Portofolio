@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
 import { PresentationComponent } from "../../sections/presentation/presentation.component";
 import { DataService } from '../../services/data.service';
-import { Experience, Presentation, Project, Skills } from '../../models/model';
+import { Education, Experience, Presentation, Projects, Skills } from '../../models/model';
 import { WorkExperienceComponent } from "../../sections/work-experience/work-experience.component";
 import { SkillsComponent } from "../../sections/skills/skills.component";
 import { ProjectsComponent } from "../../sections/projects/projects.component";
+import { EducationComponent } from '../../sections/education/education.component';
 
 @Component({
   selector: 'app-body',
   standalone: true,
-  imports: [PresentationComponent, WorkExperienceComponent, SkillsComponent, ProjectsComponent],
+  imports: [PresentationComponent, WorkExperienceComponent, SkillsComponent, ProjectsComponent, EducationComponent],
   templateUrl: './body.component.html',
   styleUrl: './body.component.scss'
 })
@@ -18,8 +19,8 @@ export class BodyComponent {
   prensentationData!: Presentation;
   skillsData!: Skills;
   experienceData!: Experience[];
-  projectData!: Project[];
-  //educationData!: ;
+  projectData!: Projects;
+  educationData!: Education[];
 
   constructor (private dataService: DataService) {}
 
@@ -35,6 +36,9 @@ export class BodyComponent {
     );
     this.dataService.getProjectsData().subscribe(
       (data) => this.projectData = data
+    );
+    this.dataService.getEducationData().subscribe(
+      (data) => this.educationData = data
     );
   }
 

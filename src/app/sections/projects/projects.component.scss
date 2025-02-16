@@ -1,0 +1,51 @@
+section {
+  display: flex;
+  flex-direction: column;
+
+  .projects {
+    display: flex;
+
+    &-desc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-content: center;
+      justify-content: center;
+    }
+
+    &-illus {
+      width: 58%;
+
+      &:not(.visible) {
+        opacity: 0;
+      }
+    
+      &.visible {
+        animation-duration: 2s;
+        animation-name: fadeIn;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1260px) {
+    h2.title {
+      align-self: center;
+    }
+
+    .projects {
+      flex-direction: column;
+      gap: 24px;
+
+      &-illus {
+        width: auto;
+      }
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    .projects {
+      gap: 24px;
+    }
+  }
+}

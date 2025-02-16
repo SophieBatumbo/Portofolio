@@ -16,13 +16,17 @@ export interface Skills {
 export interface Card  {
   logoPath: string;
   title: string;
+  link: string;
   description: string;
   spotPoints: string[];
+  technos: {name: string, color: string}[];
+  forkNumber: string;
+  size: number;
 }
 
-export interface Project {
-  title: string;
-  cards: Card[];
+export interface Projects {
+  sectionTitle: string;
+  projectsCards: Card[];
   illustrationPath: string;
   illustrationDesc: string;
 }
@@ -33,4 +37,16 @@ export interface Experience {
   jobTitle: string;
   period: string;
   description: string;
+}
+
+export interface Education {
+  diploma: string;
+  establishment: string;
+  period: string;
+}
+
+export interface DownloadFile {
+  url: string;
+  file: string;
+  name: string;
 }

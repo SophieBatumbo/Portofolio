@@ -1,20 +1,27 @@
 import { Component, Input } from '@angular/core';
 import { ButtonComponent } from '../../common-components/button/button.component';
-import { Observable } from 'rxjs';
-import { Presentation } from '../../models/model';
+import { DownloadFile, Presentation } from '../../models/model';
+import { DataService } from '../../services/data.service';
+import { InViewportDirective } from '../../directives/in-viewport.directive';
 
 @Component({
   selector: 'app-presentation',
   standalone: true,
-  imports: [ButtonComponent],
+  imports: [ButtonComponent, InViewportDirective],
   templateUrl: './presentation.component.html',
   styleUrl: './presentation.component.scss'
 })
 export class PresentationComponent {
+
   @Input() presentation!: Presentation;
-  /*pageTitle!: string;
-  title!: string;
-  description!: string;
-  illustrationPath!: string;
-  illustrationDesc!: string;*/
+  @Input() downloadFile!: DownloadFile;
+
+  constructor(private dataService: DataService){}
+
+  ngOnInit (){
+    this.dataService.getDownloadFileData().subscribe(
+      data => this.downloadFile = data
+    );
+  }
+
 }

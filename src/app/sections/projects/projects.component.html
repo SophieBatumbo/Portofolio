@@ -1,9 +1,17 @@
 <section><a name="projects"></a>
-  <div class="projects" *ngFor="let project of projects">
+  <h2 class="title">{{ projects.sectionTitle }}</h2>
+  <div class="projects">
     <div class="projects-desc">
-      <h2 class="title">{{ project.title }}</h2>
-      <app-card *ngFor="let card of project.cards" [logoPath]="card.logoPath" [title]="card.title" [description]="card.description" [spotPoints]="card.spotPoints"></app-card>
+      <app-card *ngFor="let card of projects.projectsCards" 
+      [logoPath]="card.logoPath" 
+      [title]="card.title"
+      [link]="card.link" 
+      [description]="card.description" 
+      [spotPoints]="card.spotPoints" 
+      [technos]="card.technos" 
+      [forkNumber]="card.forkNumber" 
+      [size]="card.size" inViewport></app-card>
     </div>
-    <img class="projects-illus" src="{{ project.illustrationPath }}" alt="{{ project.illustrationDesc }}">
+    <img class="projects-illus" src="{{ projects.illustrationPath }}" alt="{{ projects.illustrationDesc }}" inViewport>
   </div>
 </section>

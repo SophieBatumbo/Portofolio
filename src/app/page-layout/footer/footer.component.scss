@@ -1,0 +1,97 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 19px;
+  margin-top: 56px;
+}
+
+section.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 318px;
+  margin-right: 262px;
+
+  .purpose {
+
+    .why {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .open {
+      display: flex;
+      gap: 4px;
+
+      :last-child {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .logos {
+    display: flex;
+    gap: 8px;
+
+    img {
+      width: 32px;
+
+      &:hover.git {
+        content: url(../../../assets/logos/github-black.png);
+      }
+      &:hover.linkedin {
+        content: url(../../../assets/logos/linkedin-black.png);
+      }
+    }
+  }
+
+  &:not(.visible) {
+    transform: translateY(17%);
+  }
+
+  &.visible {
+    animation-duration: 2s;
+    animation-name: slideUp;
+    animation-fill-mode: forwards;
+  }
+}
+
+footer {
+  display: flex;
+  color: white;
+  align-self: center;
+  font-size: 19px;
+  margin-bottom: 24px;
+}
+
+@media screen and (max-width: 1260px) {
+  
+  section.contact {
+    margin-bottom: 220px;
+    margin-right: 0;
+    align-items: center;
+    text-align: center;
+
+    .open {
+      justify-content: center;
+    }
+  }
+
+
+  footer {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  
+  section.contact {
+    margin-bottom: 64px;
+  }
+
+  footer {
+    margin-bottom: 6px;
+    font-size: 12px;
+  }
+}

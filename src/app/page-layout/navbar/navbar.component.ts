@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  logoPagePath: string = 'assets/sosPage.png';
+  logoPagePath: string = 'assets/layout/logo.png';
   logoDescription: string = 'Page logo';
 }
