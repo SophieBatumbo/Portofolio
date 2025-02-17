@@ -99,3 +99,13 @@ main:first-of-type {
     transform: translateY(0%);
   }
 }
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-15%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}

@@ -1,11 +1,15 @@
 <nav>
     <div class="nav-logo">
         <a href="#presentation"><img src="{{ logoPagePath }}" alt="{{ logoDescription }}"></a>
+        <img class="close" src="assets/icons/close.svg" (click)="hideActions()" alt="cross icon to close navbar">
     </div>
     <div class="nav-actions">
         <a href="#skills" class="action"> Skills </a>
         <a href="#workexperiences" class="action"> Working Experience </a>
         <a href="#projects" class="action"> Projects </a>
         <a href="#education" class="action"> Education </a>
+    </div>
+    <div class="nav-mobil">
+        <img src="assets/layout/bar.png" (click)="displayActions()" alt="burger menu icon">
     </div>
 </nav>

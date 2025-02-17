@@ -9,6 +9,10 @@ nav {
       img {
         width: 68px;
       }
+
+      .close {
+        display: none;
+      }
     }
 
     &-actions {
@@ -23,10 +27,32 @@ nav {
         }
       }
     }
+
+    &-mobil {
+      display: none;
+    }
   }
 
   @media screen and (max-width: 760px) {
     margin-top: 16px;
+
+    &.mobil {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .nav {
+        &-logo {
+          display: flex;
+          justify-content: space-between;
+
+          .close {
+            display: block;
+            width: 24px;
+          }
+        }
+      }
+    }
 
     .nav {
       &-logo {
@@ -36,12 +62,39 @@ nav {
       }
 
       &-actions {
-        content: url(../../../assets/layout/bar.png);
-        max-width: 32px;
-        max-height: 36px;
+        display: none;
 
-        a {
+        &.visible {
+          display: flex;
+          flex-direction: column;
+          gap: 0;
+          animation: slideDown 1s 1;
+
+          a {
+            padding: 16px 0 ;
+
+            &:first-child, &:nth-child(2), &:nth-child(3) {
+              border-bottom: solid 1px #f4f4f4;
+            }
+
+            &:hover {
+              background-color: #f4f4f4;
+            }
+          }
+        }
+
+        &.visible ~.nav-mobil {
           display: none;
+        }
+      }
+
+      &-mobil {
+        display: flex;
+
+        img {
+          display: block;
+          max-width: 32px;
+          max-height: 36px;
         }
       }
     }
