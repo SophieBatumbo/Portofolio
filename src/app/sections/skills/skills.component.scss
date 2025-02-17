@@ -5,15 +5,23 @@
   &-desc {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 32px;
 
     .title {
       margin-top: 56px;
     }
 
+    .logos-and-skills-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
     .logos {
       display: flex;
-      gap: 16px;
+      gap: 20px;
+      justify-content: center;
+
       span {
         display: flex;
         flex-direction: column;
@@ -21,6 +29,7 @@
         gap: 12px;
         justify-content: end;
       }
+
       img{
         width: 60px;
         filter: grayscale(100%);
@@ -29,6 +38,7 @@
           filter: none;
         }
       }
+
       legend {
         font-size: 10px;
         color: #868e96 ;
@@ -50,7 +60,7 @@
 
   &-illus {
     display: flex;
-    width: 54%;
+    width: 43%;
     height: fit-content;
 
     &:not(.visible) {
@@ -68,9 +78,10 @@
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
     padding-left: 0;
     font-size: 19px;
+    color: #868e96;
 
     > li {
       display: flex;
@@ -103,7 +114,8 @@
     }
 
     &-illus {
-      width: 100%;
+      width: 85%;
+      align-self: center;
 
       &:not(.visible) {
         transform: translateX(-50%);
@@ -111,12 +123,16 @@
     }
 
     &-list {
-      font-size: 16px;
+      font-size: 19px;
       line-height: 24px;
     }
   }
 
   @media screen and (max-width: 760px) {
+    &-illus {
+      width: 115%;
+    }
+
     &-list {
       text-align: center;
     }

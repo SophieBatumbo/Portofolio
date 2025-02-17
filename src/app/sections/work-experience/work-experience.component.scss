@@ -1,7 +1,7 @@
 section {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 28px;
 
   .experiences {
     display: flex;
@@ -15,23 +15,23 @@ section {
       animation-fill-mode: forwards;
     }
     > :nth-child(2).visible {
-      animation: fadeIn 1s 1s 1;
+      animation: fadeIn 1s 0.25s 1;
       animation-fill-mode: forwards;
     }
     > :nth-child(3).visible {
-      animation: fadeIn 1s 2s 1;
+      animation: fadeIn 1s 0.5s 1;
       animation-fill-mode: forwards;
     }
     > :nth-child(4).visible {
-      animation: fadeIn 1s 3s 1;
+      animation: fadeIn 1s 0.75s 1;
       animation-fill-mode: forwards;
     }
     > :nth-child(5).visible {
-      animation: fadeIn 1s 4s 1;
+      animation: fadeIn 1s 1s 1;
       animation-fill-mode: forwards;
     }
     > :nth-child(6).visible {
-      animation: fadeIn 1s 5s 1;
+      animation: fadeIn 1s 1.25s 1;
       animation-fill-mode: forwards;
     }
   }

@@ -18,10 +18,10 @@ export const mockSkills: Skills =
     {path: "assets/logos/sass.png", legend:"SASS"}, 
     {path: "assets/logos/github.png", legend:"GitHub"}
   ],
-  skills_names: ["First step in web development : Javascript, I wanted to learn more.", 
-    "First Angular step : NgBootstrap open source design system, sooo interesting, but some things were missing in my background to go even futher in my carreer's goals.", 
-    "First personnal project Analyco : lot of new skills and new challenges (architecture, components' tree, and apply new knowledge).",
-    "Web integration :  after CMA mission, SASS and CSS are now my besties."],
+  skills_names: ["Web development step : Javascript in 3D modelisation world, I wanted to learn about framework.", 
+    "Angular step: NgBootstrap open source design system, sooo interesting, but needed to learn about integration.", 
+    "Personnal project step : new skills and challenges as architecture, components' tree, and apply fresh knowledge.",
+    "Web integration step : after CMA mission, SASS and CSS are now my besties ❤️. I'm ready to be an Angular developer !"],
   illustrationPath: "assets/illustrations-sections/skills.png",
   illustrationDesc: "Illustration du développement frontend."
 };
@@ -34,8 +34,8 @@ export const mockProjects: Projects =
       logoPath: "assets/logos/git-repository.svg",
       title: "Portfolio",
       link: "https://github.com/SophieBatumbo/PersonnalPage",
-      description: "A modern web page responsive to present my work.",
-      spotPoints: ["Developped with Angular", "SASS and CSS animations"],
+      description: "A modern web page responsive to present my experience and projects.",
+      spotPoints: ["Developped with Angular", "SASS and CSS animations", "Responsive"],
       technos: [{name:"Typescript", color:"blue"}, {name:"SASS", color:"pink"}, {name:"HTML", color:"orange"}],
       forkNumber: '0',
       size: 2.1
@@ -55,7 +55,7 @@ export const mockProjects: Projects =
       title: "NgBootstrap",
       link: "https://github.com/SophieBatumbo/ng-bootstrap",
       description: "An open source design system fit for Angular projects.",
-      spotPoints: ["Uses only Angular and Bootstrap CSS", "Downloaded by 500 000 developers per month", "Does not require jQuery"],
+      spotPoints: ["Uses only Angular and Bootstrap CSS", "Downloaded 500 000/month by developers", "Does not require jQuery"],
       technos: [{name:"Typescript", color:"blue"}, {name:"SASS", color:"pink"}, {name:"HTML", color:"orange"}],
       forkNumber: '1.6k',
       size: 12.96
@@ -85,14 +85,14 @@ export const mockExperiences: Experience[] = [
     logoPath: "assets/logos/navalgroup.png",
     jobTitle: "Project Engeneer",
     period: "Aug 2022 - Dec 2022",
-    description: "Assist and support client via a service center, debug data treatment automation tools in VBA."
+    description: "Assist and support client via a service center, automation of data treatment in VBA."
   },
   {
     company: "Dassault Systemes",
     logoPath: "assets/logos/3ds.png",
     jobTitle: "Web Developper",
     period: "Sep 2021 - Jul 2022",
-    description: "Release managment and migration of translation technology of 3D modelisation software."
+    description: "Release managment, migration of translation technology of 3D modelisation software."
   },
   {
     company: "Dassault Systemes",

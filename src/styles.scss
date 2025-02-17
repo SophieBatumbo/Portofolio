@@ -45,11 +45,12 @@ main:first-of-type {
 
 @media screen and (max-width: 760px) {
   body {
-    background-size: 100% 1.4%;
+    background-size: 100% 1.2%;
   }
 
   h1 {
-    font-size: 2.35rem;
+    margin: 0;
+    font-size: 2rem;
   }
 
   h2 {
