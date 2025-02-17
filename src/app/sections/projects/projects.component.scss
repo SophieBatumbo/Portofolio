@@ -14,7 +14,9 @@ section {
     }
 
     &-illus {
-      width: 58%;
+      max-width: 590px;
+      max-height: 590px;
+      height: fit-content;
 
       &:not(.visible) {
         opacity: 0;
@@ -40,7 +42,8 @@ section {
       gap: 24px;
 
       &-illus {
-        width: auto;
+        width: 65%;
+        align-self: center;
       }
     }
   }
