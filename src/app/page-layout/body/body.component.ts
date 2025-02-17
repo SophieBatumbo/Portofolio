@@ -16,7 +16,7 @@ import { EducationComponent } from '../../sections/education/education.component
 })
 export class BodyComponent {
 
-  prensentationData!: Presentation;
+  presentationData!: Presentation;
   skillsData!: Skills;
   experienceData!: Experience[];
   projectData!: Projects;
@@ -26,7 +26,7 @@ export class BodyComponent {
 
   ngOnInit(){
     this.dataService.getPresentationData().subscribe(
-      (data) => this.prensentationData = data
+      (data) => this.presentationData = data
     );
     this.dataService.getSkillsData().subscribe(
       (data) => this.skillsData = data

@@ -50,7 +50,8 @@
 
   &-illus {
     display: flex;
-    width: 60%;
+    width: 38%;
+    height: fit-content;
 
     &:not(.visible) {
       transform: translateX(-100%);
@@ -123,7 +124,7 @@
 
   @media screen and (min-width: 1260px) {
     &-list {
-      line-height: 48px;
+      line-height: 40px;
     }
   }
 }

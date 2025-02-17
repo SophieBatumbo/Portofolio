@@ -1,6 +1,6 @@
 :host {
   display: flex;
-  flex: 0 1 100%;
+  flex: 0 1 20%;
   opacity: 0;
 }
 
@@ -96,8 +96,14 @@
   }
 }
 
-@media screen and (max-width: 1260px) and (min-width: 761px) {
+@media screen and (max-width: 1260px) {
   :host {
     flex: 0 1 45%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  :host {
+    flex: 0 1 100%;
   }
 }

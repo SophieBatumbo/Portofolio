@@ -18,10 +18,10 @@ export const mockSkills: Skills =
     {path: "assets/logos/sass.png", legend:"SASS"}, 
     {path: "assets/logos/github.png", legend:"GitHub"}
   ],
-  skills_names: ["Javascript was my first step in web development with Dassault Systemes, I wanted to learn more.", 
-    "My first Angular step was on NgBootstrap open source design system, it was so interesting, but some things were missing in my background to go even futher in my goals carrer.", 
-    "In parallel my first personnal project Analyco was born to help me improve a lot of new skills and bring to me new challenges (architecture, build my own components' tree, and apply new knowledge).",
-    "Experience with CMA was oriented on web integration, now SASS and CSS are my besties."],
+  skills_names: ["First step in web development : Javascript, I wanted to learn more.", 
+    "First Angular step : NgBootstrap open source design system, sooo interesting, but some things were missing in my background to go even futher in my carreer's goals.", 
+    "First personnal project Analyco : lot of new skills and new challenges (architecture, components' tree, and apply new knowledge).",
+    "Web integration :  after CMA mission, SASS and CSS are now my besties."],
   illustrationPath: "assets/illustrations-sections/skills.png",
   illustrationDesc: "Illustration du développement frontend."
 };
@@ -71,7 +71,7 @@ export const mockExperiences: Experience[] = [
     logoPath: "assets/logos/cma.png",
     jobTitle: "Web Developper",
     period: "Sep 2023 - Oct 2024",
-    description: "Development of design system, mockup's implementation."
+    description: "Development of design system, mockup's implementation with UX/UI designers."
   },
   {
     company: "Amadeus",
