@@ -82,6 +82,10 @@ section {
       &-desc {
         align-items: center;
 
+        &:not(.visible) {
+          transform: translateX(-50%) ;
+        }
+
         .title, .description {
           text-align: center;
         }

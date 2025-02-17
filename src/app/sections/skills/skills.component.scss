@@ -103,6 +103,10 @@
 
     &-illus {
       width: 100%;
+
+      &:not(.visible) {
+        transform: translateX(-50%);
+      }
     }
 
     &-list {

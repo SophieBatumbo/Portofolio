@@ -29,6 +29,8 @@ section {
   }
 
   @media screen and (max-width: 1260px) {
+    gap: 24px;
+
     h2.title {
       align-self: center;
     }
