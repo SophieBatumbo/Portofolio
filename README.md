@@ -1,4 +1,4 @@
-# PersonnalPage
+# Portofolio
 
 Welcome on a presentation about all you should know about me to collaborate.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
