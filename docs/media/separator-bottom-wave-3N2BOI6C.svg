@@ -1,0 +1,60 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     class="svg-snoweb svg-theme-light"
+     x="0"
+     y="0"
+     width="100%"
+     height="100%"
+     viewBox="0 0 1920 383"
+     preserveAspectRatio="none"
+>
+<defs>
+    <style>
+        
+            
+            
+            
+        
+
+        .svg-fill-primary {
+            fill: #a9735b;
+        }
+
+        .svg-fill-secondary {
+            fill: #a9735b;
+        }
+
+        .svg-fill-tertiary {
+            fill: #fff;
+        }
+
+        .svg-stroke-primary {
+            stroke: #a9735b;
+        }
+
+        .svg-stroke-secondary {
+            stroke: #a9735b;
+        }
+
+        .svg-stroke-tertiary {
+            stroke: #fff;
+        }
+    </style>
+</defs>
+    <g transform="scale (1, -1)" transform-origin="center">
+        
+    <path class="svg-fill-primary" d="M0,0H1920s-128.75,350.62-705.51,282.81-643.15-244.74-940-94.46C-8.75,331.77,0,0,0,0Z"></path>
+    <circle class="svg-fill-primary" cx="403" cy="256.5" r="40.89"></circle>
+    <circle class="svg-fill-primary" cx="362.11" cy="358.72" r="24.28"></circle>
+   <path id="path" d="M500,200 Q540,240 500,280 T500,340 T500,280 T500,200" fill="transparent" stroke="none" />
+    <circle class="svg-fill-primary" cx="422.95" cy="347.59" r="11.13"></circle>
+    <circle class="svg-fill-primary" cx="0" cy="0" r="16.89" fill="blue">
+      <animateMotion dur="6s" repeatCount="indefinite">
+        <mpath href="#path" />
+      </animateMotion>
+    </circle>
+    <circle class="svg-fill-primary" cx="1798.98" cy="269.28" r="19.37">
+    </circle>
+
+    </g>
+</svg>
