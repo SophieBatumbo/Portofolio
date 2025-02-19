@@ -29,4 +29,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Update github page
 
-Run `ng build --output-path docs --base-href /Portofolio/`. Then, from 'docs/browser' folder, move all the content of 'browser' folder into 'docs' folder. Delete empty 'browser' folder. Add commit and push.
+# Frist Step
+Commit and push your last changes.
+
+# Second and last step
+Run in your command line `./deploy.sh`
+
+OR
+
+run `ng build --output-path docs --base-href /Portofolio/`. Then, from 'docs/browser' folder, move all the content of 'browser' folder into 'docs' folder. Delete empty 'browser' folder. Add commit and push.
+
+That's all hihi

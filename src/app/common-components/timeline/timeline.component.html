@@ -1,5 +1,5 @@
-<section class="timeline" *ngFor="let dip of education">
-  <p>{{ dip.diploma }}</p>
-  <p>{{ dip.period }}</p>
-  <p>{{ dip.establishment }}</p>
+<section class="timeline" *ngFor="let dip of education" inViewport>
+  <p class="diploma">{{ dip.diploma }}</p>
+  <p class="period">{{ dip.period }}</p>
+  <p class="establishment">{{ dip.establishment }}</p>
 </section>

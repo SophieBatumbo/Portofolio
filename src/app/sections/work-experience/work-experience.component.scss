@@ -1,13 +1,13 @@
 section {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 32px;
 
   .experiences {
     display: flex;
-    gap: 44px 24px;
+    gap: 44px 9%;
     flex-wrap: wrap;
-    justify-content: center ;
+    justify-content: space-evenly;
 
     // BEWARE : here we add css to each experience card manually,so if you add anything think to actualize here or to make a function in JS
     > :first-child.visible {

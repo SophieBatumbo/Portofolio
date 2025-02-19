@@ -1,6 +1,7 @@
 .skills{
   display: flex;
   gap: 24px;
+  justify-content: space-evenly;
 
   &-desc {
     display: flex;
@@ -31,16 +32,22 @@
       }
 
       img{
-        width: 60px;
+        width: 68px;
         filter: grayscale(100%);
 
         &:hover {
           filter: none;
+          transform: translateY(-4px);
+          width: 70px;
+
+          +legend {
+            font-weight: 700;
+          }
         }
       }
 
       legend {
-        font-size: 10px;
+        font-size: 16px;
         color: #868e96 ;
       }
     }
@@ -63,6 +70,7 @@
     max-width: 600px;
     max-height: 600px;
     height: fit-content;
+    align-self: center;
 
     &:not(.visible) {
       transform: translateX(-100%);
@@ -130,6 +138,14 @@
   }
 
   @media screen and (max-width: 760px) {
+    &-desc {
+      .logos {
+        img {
+          filter: none;
+        }
+      }
+    }
+
     &-illus {
       width: 115%;
     }

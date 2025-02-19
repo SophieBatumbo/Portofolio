@@ -112,29 +112,29 @@ export const mockExperiences: Experience[] = [
 
 export const mockEducation: Education[] = [
   {
-    diploma: 'Bac S',
+    diploma: 'Bac Scientifique',
     establishment: 'Lycée Alain',
-    period: '2016'
+    period: '2013 - 2016'
   },
   {
     diploma: 'Licence MIAGE',
     establishment: 'Nanterre university',
-    period: '2019'
+    period: '2016 - 2019'
   },
   {
     diploma: 'Master MIAGE',
     establishment: 'Nanterre university',
-    period: '2021'
+    period: '2019 - 2021'
   },
   {
     diploma: 'PSM1 certificate',
-    establishment: '',
+    establishment: 'Squad',
     period: '2024'
   }
 ];
 
 export const mockDownloadFile: DownloadFile = {
-  url: '../../../assets/resume.pdf',
+  url: 'assets/resume.pdf',
   file: 'resume.pdf',
   name: 'CV_2025-02_Sophie_Batumbo.pdf'
 };
