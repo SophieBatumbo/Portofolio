@@ -47,6 +47,5 @@ export interface Education {
 
 export interface DownloadFile {
   url: string;
-  file: string;
   name: string;
 }

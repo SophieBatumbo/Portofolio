@@ -135,6 +135,5 @@ export const mockEducation: Education[] = [
 
 export const mockDownloadFile: DownloadFile = {
   url: 'assets/resume.pdf',
-  file: 'resume.pdf',
   name: 'CV_2025-02_Sophie_Batumbo.pdf'
 };

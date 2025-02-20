@@ -1,6 +1,6 @@
 
 <button *ngIf="downloadFile && !mail && action">
-    <a [href]="downloadFile.url" target="_blank" [download]="downloadFile.file">
+    <a [href]="downloadFile.url" target="_blank" [download]="downloadFile.name">
         {{ action }}
     </a>
 </button>
