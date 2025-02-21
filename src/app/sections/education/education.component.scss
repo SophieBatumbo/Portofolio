@@ -13,6 +13,7 @@ section{
       max-height: 590px;
       height: fit-content;
       align-self: center;
+      z-index: -1;
 
       &:not(.visible) {
         opacity: 0;

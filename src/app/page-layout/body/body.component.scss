@@ -1,3 +1,12 @@
+:host {
+  position: relative;
+  top: calc(46px + 32px + 32px);
+
+  @media screen and (max-width: 760px) {
+    top: calc(46px + 16px + 16px);
+  }
+}
+
 main {
   display: flex;
   flex-direction: column;

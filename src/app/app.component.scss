@@ -1,0 +1,12 @@
+:nth-child(2) {
+  display: block;
+  margin: 0 100px;
+
+  @media screen and (max-width: 1260px) {
+    margin: 0 56px;
+  }
+
+  @media screen and (max-width: 760px) {
+    margin: 0 26px;
+  }
+}

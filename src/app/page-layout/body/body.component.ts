@@ -6,11 +6,12 @@ import { WorkExperienceComponent } from "../../sections/work-experience/work-exp
 import { SkillsComponent } from "../../sections/skills/skills.component";
 import { ProjectsComponent } from "../../sections/projects/projects.component";
 import { EducationComponent } from '../../sections/education/education.component';
+import { ContactComponent } from "../../sections/contact/contact.component";
 
 @Component({
   selector: 'app-body',
   standalone: true,
-  imports: [PresentationComponent, WorkExperienceComponent, SkillsComponent, ProjectsComponent, EducationComponent],
+  imports: [PresentationComponent, WorkExperienceComponent, SkillsComponent, ProjectsComponent, EducationComponent, ContactComponent],
   templateUrl: './body.component.html',
   styleUrl: './body.component.scss'
 })

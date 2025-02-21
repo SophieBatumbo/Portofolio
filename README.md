@@ -29,10 +29,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Update github page
 
-# Frist Step
+### Frist Step
 Commit and push your last changes.
 
-# Second and last step
+### Second and last step
 Run in your command line `./deploy.sh`
 
 OR

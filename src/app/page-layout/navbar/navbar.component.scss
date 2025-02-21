@@ -1,8 +1,17 @@
+:host {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 2;
+}
+
 nav {
   display: flex;
   justify-content: space-between ;
   font-size: 19px;
-  margin: 32px 0;
+  margin: 32px 112px;
+  align-items: center;
   
   .nav {
     &-logo {
@@ -33,8 +42,13 @@ nav {
     }
   }
 
-  @media screen and (max-width: 760px) {
-    margin-top: 16px;
+  @media screen and (max-width: 1260px) {
+    margin-left: 56px;
+    margin-right: 56px;
+  }
+
+  @media screen and (max-width: 860px) {
+    margin: 16px 26px;
 
     &.mobil {
       display: flex;
@@ -56,6 +70,8 @@ nav {
 
     .nav {
       &-logo {
+        width: 100%;
+
         img {
           width: 52px;
         }
@@ -63,6 +79,7 @@ nav {
 
       &-actions {
         display: none;
+        width: 100%;
 
         &.visible {
           display: flex;
@@ -73,7 +90,7 @@ nav {
           a {
             padding: 16px 0 ;
 
-            &:first-child, &:nth-child(2), &:nth-child(3) {
+            &:nth-child(n):not(:last-child) {
               border-bottom: solid 1px #f4f4f4;
             }
 

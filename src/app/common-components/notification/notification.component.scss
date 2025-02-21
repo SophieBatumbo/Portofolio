@@ -1,0 +1,29 @@
+.notification {
+  font-size: 19px;
+  border-radius: 10px;
+  position: fixed;
+  padding: 12px;
+  bottom: 85%;
+  left: 80%;
+  width: max-content;
+  opacity: 0;
+
+  &:not(.visible) {
+    opacity: 0;
+  }
+
+  &.visible {
+    animation-duration: 6s;
+    animation-name: fadeIn;
+  }
+
+  &.success {
+    background-color: rgba(55, 116, 55, 0.603);
+    color: darken(rgb(55, 116, 55), 20%);
+  }
+
+  &.fail {
+    background-color: rgb(206, 61, 61, 0.603);
+    color: darken(rgb(206, 61, 61), 20%);
+  }
+}

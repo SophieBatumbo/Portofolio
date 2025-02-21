@@ -27,11 +27,11 @@ section {
       animation-fill-mode: forwards;
     }
     > :nth-child(5).visible {
-      animation: fadeIn 1s 1s 1;
+      animation: fadeIn 1s 0.80s 1;
       animation-fill-mode: forwards;
     }
     > :nth-child(6).visible {
-      animation: fadeIn 1s 1.25s 1;
+      animation: fadeIn 1s 0.90s 1;
       animation-fill-mode: forwards;
     }
   }

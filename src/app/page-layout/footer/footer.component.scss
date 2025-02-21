@@ -1,92 +1,31 @@
 :host {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  font-size: 19px;
-  margin-top: 84px;
-}
-
-section.contact {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  margin-bottom: 318px;
-  margin-right: 262px;
-
-  .footer-content {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .purpose {
-
-    .why {
-      text-transform: uppercase;
-      font-weight: 700;
-      color: #868e96;
-    }
-
-    .open {
-      display: flex;
-      gap: 4px;
-
-      :last-child {
-        font-weight: 700;
-      }
-    }
-  }
-
-  .logos {
-    display: flex;
-    gap: 8px;
-
-    img {
-      width: 32px;
-
-      &:hover.git {
-        content: url(../../../assets/logos/github-black.png);
-      }
-      &:hover.linkedin {
-        content: url(../../../assets/logos/linkedin-black.png);
-      }
-    }
-  }
-
-  &:not(.visible) {
-    transform: translateY(17%);
-  }
-
-  &.visible {
-    animation-duration: 2s;
-    animation-name: slideUp;
-    animation-fill-mode: forwards;
-  }
+  justify-content: center;
+  background-image: url('../../../assets/layout/separator-bottom-wave.svg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  height: 60%;
+  padding: 0;
 }
 
 footer {
-  display: flex;
   color: white;
-  align-self: center;
   font-size: 19px;
   margin-bottom: 24px;
+  display: flex;
+  align-items: end;
+}
+
+@media screen and (max-width: 1640px) {
+  :host  {
+    height: 49%;
+  }
 }
 
 @media screen and (max-width: 1260px) {
-  
-  section.contact {
-    margin-bottom: 64px;
-    margin-right: 0;
-    align-items: center;
-    text-align: center;
-
-    .open {
-      justify-content: center;
-    }
-
-    .logos {
-      justify-content: center;
-    }
+  :host {
+    height: 35%;
   }
 
   footer {
@@ -95,3 +34,8 @@ footer {
   }
 }
 
+@media screen and (max-width: 760px) {
+  :host  {
+    height: 12%;
+  }
+}
