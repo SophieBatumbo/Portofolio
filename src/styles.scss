@@ -61,6 +61,14 @@ body, h3, h4, h5, h6, p {
   100%{opacity: 1;}
 }
 
+@keyframes fadeInAndOut {
+  0%{opacity: 0.75;}
+  25%{opacity: 1;}
+  90%{opacity: 1;}
+  95%{opacity: 0.75;}
+  100%{opacity: 0.50;}
+}
+
 @keyframes slideUp {
   from {
     transform: translateY(17%);
