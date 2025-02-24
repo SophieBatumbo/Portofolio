@@ -1,0 +1,135 @@
+section {
+  display: flex;
+  justify-content: space-evenly;
+
+  .presentation {
+    &-desc {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      font-size: 30px;
+      line-height: 48px;
+      flex: 0 1 50%;
+
+      .title {
+        img {
+          width: 48px;
+          transform-origin: center bottom;
+          animation: wave 1s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+
+          @keyframes wave {
+            0% { transform: rotate(0deg); }
+            33% { transform: rotate(5deg); }
+            66% { transform: rotate(0deg); }
+            100% { transform: rotate(-5deg); }
+          }
+        }
+      }
+
+      .description {
+        color: #868e96; 
+      }
+
+      .logos {
+        display: flex;
+        gap: 8px;
+
+        img {
+          width: 32px;
+
+          &:hover.git {
+            content: url(../../../../assets/logos/github-black.png);
+          }
+          &:hover.linkedin {
+            content: url(../../../../assets/logos/linkedin-black.png);
+          }
+        }
+      }
+
+      &:not(.visible) {
+        transform: translateX(-100%);
+      }
+  
+      &.visible {
+        animation-duration: 2s;
+        animation-name: slideInFromLeft;
+        animation-fill-mode: forwards;
+      }
+    }
+
+    &-illus {
+      max-width: 590px;
+      max-height: 590px;
+
+      &:not(.visible) {
+        opacity: 0;
+      }
+  
+      &.visible {
+        animation-duration: 2s;
+        animation-name: fadeIn;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: 32px;
+  }
+
+  @media screen and (max-width: 1260px) {
+    flex-direction: column;
+    gap: 24px;
+
+    .presentation {
+      &-desc {
+        align-items: center;
+
+        &:not(.visible) {
+          transform: translateX(-50%) ;
+        }
+
+        .title, .description {
+          text-align: center;
+        }
+      }
+
+      &-illus {
+        align-self: center;
+      }
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    .presentation {
+      &-desc {
+        font-size: 16px;
+        line-height: 32px;
+        margin-top: -16px;
+
+        .title {
+
+          img {
+            width: 32px;
+            margin-left: 6px;
+          }
+        }
+
+        .buttons {
+          gap: 20px;
+        }
+      }
+
+      &-illus {
+        max-width: 350px;
+        max-height: 350px;
+      }
+    }
+
+    .buttons {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}
