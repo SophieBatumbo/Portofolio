@@ -1,8 +1,8 @@
 <main>
-    <app-presentation class="presentation" [presentation]="presentationData"></app-presentation>
-    <app-skills class="skills" [skills]="skillsData"></app-skills>
-    <app-work-experience class="work-experiences" [workExperiences]="experienceData"></app-work-experience>
-    <app-projects class="projects" [projects]="projectData"></app-projects>
-    <app-education class="education" [education]="educationData"></app-education>
+    <app-presentation *ngIf="presentationData" class="presentation" [presentation]="presentationData | async"></app-presentation>
+    <app-skills class="skills" [skills]="skillsData | async"></app-skills>
+    <app-work-experience class="work-experiences" [workExperiences]="experienceData | async"></app-work-experience>
+    <app-projects class="projects" [projects]="projectData | async"></app-projects>
+    <app-education class="education" [education]="educationData | async"></app-education>
     <app-contact></app-contact>
 </main>

@@ -1,27 +1,27 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ButtonComponent } from '../../common/button/button.component';
 import { DownloadFile, Presentation } from '../../../models/model';
 import { DataService } from '../../../services/data.service';
 import { InViewportDirective } from '../../../directives/in-viewport.directive';
+import { AsyncPipe, NgIf, NgOptimizedImage } from '@angular/common';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-presentation',
   standalone: true,
-  imports: [ButtonComponent, InViewportDirective],
+  imports: [ButtonComponent, InViewportDirective, AsyncPipe, NgIf],
   templateUrl: './presentation.component.html',
   styleUrl: './presentation.component.scss'
 })
-export class PresentationComponent {
+export class PresentationComponent implements OnInit {
 
-  @Input() presentation!: Presentation;
-  @Input() downloadFile!: DownloadFile;
+  @Input({required : true}) presentation!: Presentation | null;
+  downloadFile!: Observable<DownloadFile>;
 
   constructor(private dataService: DataService){}
 
   ngOnInit (){
-    this.dataService.getDownloadFileData().subscribe(
-      data => this.downloadFile = data
-    );
+    this.downloadFile = this.dataService.getDownloadFileData();
   }
 
 }
