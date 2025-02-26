@@ -12,6 +12,6 @@ import { InViewportDirective } from '../../../directives/in-viewport.directive';
   styleUrl: './work-experience.component.scss'
 })
 export class WorkExperienceComponent {
-  @Input() workExperiences!: Experience[];
+  @Input({required : true}) workExperiences!: Experience[] | null;
   title!: string;
 }

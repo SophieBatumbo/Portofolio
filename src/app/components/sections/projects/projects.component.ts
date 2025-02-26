@@ -7,10 +7,10 @@ import { InViewportDirective } from '../../../directives/in-viewport.directive';
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CardComponent, NgFor, InViewportDirective],
+  imports: [CardComponent, NgFor, NgIf, InViewportDirective],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
-  @Input() projects!: Projects;
+  @Input({required : true}) projects!: Projects | null;
 }

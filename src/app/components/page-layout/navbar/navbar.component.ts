@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  logoPagePath: string = 'assets/layout/logo.png';
-  logoDescription: string = 'Page logo';
+  logoPagePath = 'assets/layout/logo.png';
+  logoDescription = 'Page logo';
 
   displayActions() {
     document.querySelector("nav")?.classList.add("mobil");
@@ -17,7 +17,7 @@ export class NavbarComponent {
   }
 
   hideActions() {
-    let slideUp =
+    const slideUp =
     [
       { transform: "translateY(17%)" },
       {

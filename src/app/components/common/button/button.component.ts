@@ -12,7 +12,7 @@ import { DownloadFile } from '../../../models/model';
 export class ButtonComponent {
 
   @Input() action!: string;
-  @Input() downloadFile!: DownloadFile;
-  @Input() mail : boolean = false;
+  @Input() downloadFile!: DownloadFile | null; //= {url:"", name:""};
+  @Input() mail = false;
 
 }

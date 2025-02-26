@@ -1,33 +1,33 @@
-<div class="card">
+<section class="card">
 
     <span class="card-header">
         <img src="{{ logoPath }}" alt="project icon">
-        <h4 class="title"><a href="{{ link }}" target="_blank"> {{ title }} </a></h4>
+        <h3 class="title"><a href="{{ link }}" target="_blank"> {{ title }} </a></h3>
     </span>
 
-    <div class="card-description">
+    <section class="card-description">
         <p>{{ description }}</p>
         <ul>
             <li *ngFor="let spotPoint of spotPoints">{{ spotPoint }}</li>
         </ul>
-    </div>
+    </section>
 
-    <div class="card-technical-infos">
-        <div class="infos">
+    <section class="card-technical-infos">
+        <section class="infos">
 
-            <div class="techs">
-                <div class="tech" *ngFor="let techno of technos">
-                    <div class="badge {{ techno.color }}"></div>
+            <section class="techs">
+                <section class="tech" *ngFor="let techno of technos">
+                    <section class="badge {{ techno.color }}"></section>
                     <p>{{ techno.name }}</p>
-                </div>
-            </div>
+                </section>
+            </section>
 
-            <div class="fork">
+            <section class="fork">
                 <img src="assets/icons/code-fork.svg" alt="fork icon">
                 <p>{{  forkNumber }}</p>
-            </div>
-        </div>
+            </section>
+        </section>
         <p>{{ size | number : '1.1-1' }}MB</p>
-    </div>
+    </section>
 
-</div>
+</section>

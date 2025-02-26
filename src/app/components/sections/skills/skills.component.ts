@@ -11,5 +11,5 @@ import { InViewportDirective } from '../../../directives/in-viewport.directive';
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
-  @Input() skills!: Skills;
+  @Input({required : true}) skills!: Skills | null;
 }

@@ -1,7 +1,7 @@
-<section id="projects">
+<section id="projects" *ngIf="projects">
   <h2 class="title">{{ projects.sectionTitle }}</h2>
-  <div class="projects">
-    <div class="projects-desc">
+  <section class="projects">
+    <section class="projects-desc">
       <app-card *ngFor="let card of projects.projectsCards" 
       [logoPath]="card.logoPath" 
       [title]="card.title"
@@ -10,8 +10,8 @@
       [spotPoints]="card.spotPoints" 
       [technos]="card.technos" 
       [forkNumber]="card.forkNumber" 
-      [size]="card.size" inViewport></app-card>
-    </div>
-    <img class="projects-illus" src="{{ projects.illustrationPath }}" alt="{{ projects.illustrationDesc }}" inViewport>
-  </div>
+      [size]="card.size" appInViewport></app-card>
+    </section>
+    <img class="projects-illus" src="{{ projects.illustrationPath }}" alt="{{ projects.illustrationDesc }}" loading="eager" appInViewport>
+  </section>
 </section>

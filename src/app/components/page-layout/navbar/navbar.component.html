@@ -1,16 +1,16 @@
 <nav>
-    <div class="nav-logo">
+    <section class="nav-logo">
         <a href="#presentation"><img src="{{ logoPagePath }}" alt="{{ logoDescription }}"></a>
-        <img class="close" src="assets/icons/close.svg" (click)="hideActions()" alt="cross icon to close navbar">
-    </div>
-    <div class="nav-actions">
+        <img class="close" src="assets/icons/close.svg" (click)="hideActions()" (keypress.enter)="hideActions()" alt="cross icon to close navbar" tabindex="0">
+    </section>
+    <section class="nav-actions">
         <a href="#skills" class="action"> Skills </a>
         <a href="#workexperiences" class="action"> Working Experience </a>
         <a href="#projects" class="action"> Projects </a>
         <a href="#education" class="action"> Education </a>
         <a href="#contact" class="action"> Contact Me</a>
-    </div>
-    <div class="nav-mobil">
-        <img src="assets/layout/bar.png" (click)="displayActions()" alt="burger menu icon">
-    </div>
+    </section>
+    <section class="nav-mobil">
+        <img src="assets/layout/bar.png" (click)="displayActions()" (keypress.enter)="displayActions()" alt="burger menu icon" tabindex="0">
+    </section>
 </nav>

@@ -1,14 +1,14 @@
 
-<button *ngIf="downloadFile && !mail && action">
-    <a [href]="downloadFile.url" target="_blank" [download]="downloadFile.name">
+<button *ngIf="downloadFile && !mail && action" aria-labelledby="actionBtn">
+    <a id="actionBtn" [href]="downloadFile.url" target="_blank" [download]="downloadFile.name">
         {{ action }}
     </a>
 </button>
-<button *ngIf="!downloadFile && !mail && action">
-    {{ action }}
+<button *ngIf="!downloadFile && !mail && action" aria-labelledby="actionBtn1">
+    <span id="actionBtn1">{{ action }}</span>
 </button>
-<button *ngIf="!downloadFile && mail && action">
-    <a href="mailto: sophie.bat@hotmail.fr">
+<button *ngIf="!downloadFile && mail && action" aria-labelledby="actionBtn2">
+    <a id="actionBtn2" href="mailto: sophie.bat@hotmail.fr">
         {{ action }}
     </a>
 </button>
