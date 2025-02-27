@@ -1,17 +1,22 @@
-<section id="projects" *ngIf="projects">
-  <h2 class="title">{{ projects.sectionTitle }}</h2>
+<section id="projects" *ngIf="projectSection" >
+  <h2 class="title">{{ projectSection.title }}</h2>
   <section class="projects">
     <section class="projects-desc">
-      <app-card *ngFor="let card of projects.projectsCards" 
+      <app-card *ngFor="let card of projectSection.projects" 
       [logoPath]="card.logoPath" 
       [title]="card.title"
       [link]="card.link" 
       [description]="card.description" 
-      [spotPoints]="card.spotPoints" 
+      [keyPoints]="card.keyPoints" 
       [technos]="card.technos" 
       [forkNumber]="card.forkNumber" 
       [size]="card.size" appInViewport></app-card>
     </section>
-    <img class="projects-illus" src="{{ projects.illustrationPath }}" alt="{{ projects.illustrationDesc }}" loading="eager" appInViewport>
+    <img *ngIf="projectSection.illustration" class="projects-illus" 
+      src="{{ projectSection.illustration.path }}" 
+      alt="{{ projectSection.illustration.description }}" 
+      loading="eager" 
+      appInViewport
+    >
   </section>
 </section>

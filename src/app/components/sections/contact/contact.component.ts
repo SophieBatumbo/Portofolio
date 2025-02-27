@@ -1,16 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { InViewportDirective } from '../../../directives/in-viewport.directive';
 import { NotificationComponent } from '../../common/notification/notification.component';
+import { ContactSection } from '../../../models/model';
+import { NgIf } from '@angular/common';
 
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [InViewportDirective, NotificationComponent],
+  imports: [NgIf, InViewportDirective, NotificationComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+
+  @Input({required: true}) contact!: ContactSection | null;
 
   copyMail() {
     const elemToCopy = document.querySelector(".purpose .mail p")!.textContent;

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PresentationComponent } from "../../sections/presentation/presentation.component";
 import { DataService } from '../../../services/data.service';
-import { Education, Experience, Presentation, Projects, Skills } from '../../../models/model';
+import { ContactSection, EducationSection, ExperienceSection, PresentationSection, ProjectSection, SkillSection } from '../../../models/model';
 import { WorkExperienceComponent } from "../../sections/work-experience/work-experience.component";
 import { SkillsComponent } from "../../sections/skills/skills.component";
 import { ProjectsComponent } from "../../sections/projects/projects.component";
@@ -28,11 +28,12 @@ import { Observable, of } from 'rxjs';
 })
 export class BodyComponent implements OnInit {
 
-  presentationData!: Observable<Presentation>;
-  skillsData: Observable<Skills> = of();
-  experienceData: Observable<Experience[]> = of();
-  projectData: Observable<Projects> = of();
-  educationData: Observable<Education[]> = of();
+  presentationData!: Observable<PresentationSection>;
+  skillsData: Observable<SkillSection> = of();
+  experienceData: Observable<ExperienceSection> = of();
+  projectData: Observable<ProjectSection> = of();
+  educationData: Observable<EducationSection> = of();
+  contactData: Observable<ContactSection> = of();
 
   constructor (private dataService: DataService) {}
 
@@ -42,6 +43,7 @@ export class BodyComponent implements OnInit {
     this.experienceData = this.dataService.getWorkExperienceData();
     this.projectData = this.dataService.getProjectsData();
     this.educationData = this.dataService.getEducationData();
+    this.contactData = this.dataService.getContactData();
   }
 
 }

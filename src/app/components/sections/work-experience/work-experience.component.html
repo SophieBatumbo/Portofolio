@@ -1,11 +1,11 @@
-<section class="exp-section" id="workexperiences">
-  <h2 class="title">Working experiences</h2>
+<section class="exp-section" id="workexperiences" *ngIf="experienceSection">
+  <h2 class="title">{{ experienceSection.title}}</h2>
   <span class="experiences">
-    <app-experience *ngFor="let experience of workExperiences" 
-    [company]="experience.company" 
-    [logoPath]="experience.logoPath" 
-    [jobTitle]="experience.jobTitle" 
-    [description]="experience.description" 
-    [period]="experience.period" appInViewport></app-experience>
+    <app-experience *ngFor="let workExperience of experienceSection.experiences" 
+    [company]="workExperience.company" 
+    [logoPath]="workExperience.logoPath" 
+    [jobTitle]="workExperience.jobTitle" 
+    [description]="workExperience.description" 
+    [period]="workExperience.period" appInViewport></app-experience>
   </span>
 </section>

@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CardComponent } from "../../common/card/card.component";
 import { NgFor, NgIf } from '@angular/common';
-import { Projects } from '../../../models/model';
+import { ProjectSection } from '../../../models/model';
 import { InViewportDirective } from '../../../directives/in-viewport.directive';
 
 @Component({
@@ -12,5 +12,5 @@ import { InViewportDirective } from '../../../directives/in-viewport.directive';
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
-  @Input({required : true}) projects!: Projects | null;
+  @Input({required : true}) projectSection!: ProjectSection | null;
 }

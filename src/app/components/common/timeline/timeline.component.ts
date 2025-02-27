@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Education } from '../../../models/model';
+import { AcademicRecord } from '../../../models/model';
 import { NgFor } from '@angular/common';
 import { InViewportDirective } from '../../../directives/in-viewport.directive';
 
@@ -11,5 +11,5 @@ import { InViewportDirective } from '../../../directives/in-viewport.directive';
   styleUrl: './timeline.component.scss'
 })
 export class TimelineComponent {
-  @Input() education!: Education[];
+  @Input() education!: AcademicRecord[];
 }

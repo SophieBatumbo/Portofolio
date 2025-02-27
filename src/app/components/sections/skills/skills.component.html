@@ -1,5 +1,5 @@
 <section class="skills" id="skills" *ngIf="skills">
-   <img class="skills-illus" src="{{ skills.illustrationPath }}" alt="{{ skills.illustrationDesc }}" loading="eager" appInViewport [treshold]="0.1">
+   <img *ngIf="skills.illustration" class="skills-illus" src="{{ skills.illustration.path }}" alt="{{ skills.illustration.description }}" loading="eager" appInViewport [treshold]="0.1">
    <section class="skills-desc" appInViewport [treshold]="0.05">
         <h2 class="title" *ngIf="skills.title">{{ skills.title }}</h2>
         <section class="logos-and-skills-list">

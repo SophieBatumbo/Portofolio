@@ -1,15 +1,15 @@
-<section class="contact" id="contact" appInViewport>
-  <h2>Reach out to me</h2>
+<section class="contact" id="contact" *ngIf="contact" appInViewport>
+  <h2>{{ contact.title }}</h2>
   <section class="contact-content"> 
     <span class="purpose">
-      <p class="why">Discuss a project or just wanna say hi ?</p>
-      <p class="who">My inbox is open for all​​</p>
+      <p class="why">{{ contact.why }}</p>
+      <p class="who">{{ contact.who }}​</p>
       <span class="mail">
-        <p>sophie.bat&#64;hotmail.fr</p>
+        <p>{{ contact.mail }}</p>
         <img src="assets/icons/copy.png" alt="copy text icon" (click)="copyMail()" (keypress.enter)="copyMail()" tabindex="0">
       </span>
       <span class="open">
-        <p>Open for opportunities :</p><p>Yes</p>
+        <p>Open for opportunities :</p><p *ngIf="contact.openToWork; else elseBlock">Yes</p><ng-template #elseBlock>No</ng-template>
       </span>
     </span>
     <span class="logos" >

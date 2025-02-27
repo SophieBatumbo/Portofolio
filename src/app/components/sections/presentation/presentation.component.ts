@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ButtonComponent } from '../../common/button/button.component';
-import { DownloadFile, Presentation } from '../../../models/model';
+import { DownloadFile, PresentationSection } from '../../../models/model';
 import { DataService } from '../../../services/data.service';
 import { InViewportDirective } from '../../../directives/in-viewport.directive';
-import { AsyncPipe, NgIf, NgOptimizedImage } from '@angular/common';
+import { AsyncPipe, NgIf } from '@angular/common';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -15,7 +15,7 @@ import { Observable } from 'rxjs';
 })
 export class PresentationComponent implements OnInit {
 
-  @Input({required : true}) presentation!: Presentation | null;
+  @Input({required : true}) presentation!: PresentationSection | null;
   downloadFile!: Observable<DownloadFile>;
 
   constructor(private dataService: DataService){}

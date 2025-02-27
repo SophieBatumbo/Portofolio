@@ -14,5 +14,5 @@
         </section>
     </section>
 
-    <img class="presentation-illus" src="{{ presentation.illustrationPath }}" alt="{{ presentation.illustrationDesc }}" loading="eager" appInViewport>
+    <img *ngIf="presentation.illustration" class="presentation-illus" src="{{ presentation.illustration.path }}" alt="{{ presentation.illustration.description }}" loading="eager" appInViewport>
 </section>

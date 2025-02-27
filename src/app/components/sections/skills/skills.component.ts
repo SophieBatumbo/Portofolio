@@ -1,6 +1,6 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { Skills } from '../../../models/model';
+import { SkillSection } from '../../../models/model';
 import { InViewportDirective } from '../../../directives/in-viewport.directive';
 
 @Component({
@@ -11,5 +11,5 @@ import { InViewportDirective } from '../../../directives/in-viewport.directive';
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
-  @Input({required : true}) skills!: Skills | null;
+  @Input({required : true}) skills!: SkillSection | null;
 }

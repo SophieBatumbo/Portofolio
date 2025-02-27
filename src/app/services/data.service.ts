@@ -1,31 +1,35 @@
 import { Injectable } from '@angular/core';
-import { mockDownloadFile, mockEducation, mockExperiences, mockPresentation, mockProjects, mockSkills } from '../models/mockup-data';
+import { mockContact, mockDownloadFile, mockEducation, mockExperiences, mockPresentation, mockProjects, mockSkills } from '../models/mockup-data';
 import { Observable, of } from 'rxjs';
-import { DownloadFile, Education, Experience, Presentation, Projects, Skills } from '../models/model';
+import { ContactSection, DownloadFile, EducationSection, ExperienceSection, PresentationSection, ProjectSection, SkillSection } from '../models/model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  getPresentationData():Observable<Presentation>{
+  getPresentationData():Observable<PresentationSection>{
     return of(mockPresentation);
   }
 
-  getSkillsData():Observable<Skills>{
+  getSkillsData():Observable<SkillSection>{
     return of(mockSkills);
   }
 
-  getWorkExperienceData():Observable<Experience[]>{
+  getWorkExperienceData():Observable<ExperienceSection>{
     return of(mockExperiences);
   }
 
-  getProjectsData():Observable<Projects>{
+  getProjectsData():Observable<ProjectSection>{
     return of(mockProjects);
   }
 
-  getEducationData():Observable<Education[]>{
+  getEducationData():Observable<EducationSection>{
     return of(mockEducation);
+  }
+
+  getContactData():Observable<ContactSection>{
+    return of(mockContact);
   }
 
   getDownloadFileData():Observable<DownloadFile>{

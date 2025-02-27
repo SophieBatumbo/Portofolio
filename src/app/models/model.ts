@@ -1,37 +1,36 @@
-export interface Presentation  {
-  title: string;
+export interface Illustration {
+  path: string;
   description: string;
-  illustrationPath: string;
-  illustrationDesc: string;
 }
 
-export interface Skills {
+export interface Logo {
+  path: string;
+  legend: string;
+}
+
+export interface Section {
   title: string;
-  logos: {path: string, legend: string}[];
-  skills_names: string[];
-  illustrationPath: string;
-  illustrationDesc: string;
+  illustration?: Illustration;
 }
 
-export interface Card  {
+export interface ProjectCard {
   logoPath: string;
   title: string;
   link: string;
   description: string;
-  spotPoints: string[];
+  keyPoints: string[];
   technos: {name: string, color: string}[];
   forkNumber: string;
   size: number;
 }
 
-export interface Projects {
-  sectionTitle: string;
-  projectsCards: Card[];
-  illustrationPath: string;
-  illustrationDesc: string;
+export interface AcademicRecord {
+  diploma: string;
+  institution: string;
+  period: string;
 }
 
-export interface Experience {
+export interface WorkExperience {
   company: string;
   logoPath: string;
   jobTitle: string;
@@ -39,13 +38,46 @@ export interface Experience {
   description: string;
 }
 
-export interface Education {
-  diploma: string;
-  establishment: string;
-  period: string;
-}
-
 export interface DownloadFile {
   url: string;
   name: string;
+}
+
+export interface Link {
+  url: string;
+  targetAttribute: "_self" | "_blank";
+  iconPath: string;
+  label: string;
+}
+
+/** SECTIONS **/
+
+export interface PresentationSection extends Section {
+  description: string;
+  links: Link[];
+}
+
+export interface SkillSection extends Section {
+  logos: Logo[];
+  skills_names: string[];
+}
+
+export interface ProjectSection extends Section {
+  projects: ProjectCard[];
+}
+
+export interface ExperienceSection extends Section {
+  experiences: WorkExperience[];
+}
+
+export interface EducationSection extends Section {
+  records: AcademicRecord[];
+}
+
+export interface ContactSection extends Section {
+  why: string;
+  who: string;
+  mail: string;
+  openToWork: boolean;
+  links: Link[];
 }

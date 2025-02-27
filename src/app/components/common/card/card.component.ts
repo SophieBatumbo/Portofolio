@@ -13,7 +13,7 @@ export class CardComponent {
   @Input() title!: string;
   @Input() link!: string;
   @Input() description!: string;
-  @Input() spotPoints!: string[];
+  @Input() keyPoints!: string[];
   @Input() technos!: {name: string, color: string}[];
   @Input() forkNumber!: string;
   @Input() size!: number;
