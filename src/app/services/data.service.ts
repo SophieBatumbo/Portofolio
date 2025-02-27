@@ -8,8 +8,6 @@ import { DownloadFile, Education, Experience, Presentation, Projects, Skills } f
 })
 export class DataService {
 
-  constructor() { }
-
   getPresentationData():Observable<Presentation>{
     return of(mockPresentation);
   }
