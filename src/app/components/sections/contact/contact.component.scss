@@ -53,14 +53,25 @@ section.contact {
     display: flex;
     gap: 8px;
 
-    img {
-      width: 32px;
-
-      &:hover.git {
-        content: url(../../../../assets/logos/github-black.png);
+    a {
+      img {
+        width: 32px;
       }
-      &:hover.linkedin {
-        content: url(../../../../assets/logos/linkedin-black.png);
+      
+      img:first-child {
+        display: flex;
+      }
+      img:last-child {
+        display: none;
+      }
+
+      &.hover {
+        img:first-child {
+          display: none;
+        }
+        img:last-child {
+          display: flex;
+        }
       }
     }
   }

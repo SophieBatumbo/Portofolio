@@ -2,13 +2,14 @@ import { Component, Input } from '@angular/core';
 import { InViewportDirective } from '../../../directives/in-viewport.directive';
 import { NotificationComponent } from '../../common/notification/notification.component';
 import { ContactSection } from '../../../models/model';
-import { NgIf } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
+import { MouseHoverDirective } from '../../../directives/mouse-hover.directive';
 
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [NgIf, InViewportDirective, NotificationComponent],
+  imports: [NgIf, NgFor, InViewportDirective, NotificationComponent, MouseHoverDirective],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })

@@ -1,6 +1,7 @@
 export interface Illustration {
   path: string;
   description: string;
+  hoverPath?: string;
 }
 
 export interface Logo {
@@ -46,8 +47,7 @@ export interface DownloadFile {
 export interface Link {
   url: string;
   targetAttribute: "_self" | "_blank";
-  iconPath: string;
-  label: string;
+  icon: Illustration;
 }
 
 /** SECTIONS **/

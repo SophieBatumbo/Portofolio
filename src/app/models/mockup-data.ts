@@ -10,16 +10,22 @@ export const mockPresentation: PresentationSection = {
   description: "Curious and dedicated to web development, I design modern and responsive user interfaces. I focus on providing a seamless and intuitive user experience, ensuring that every detail improves usability and accessibility.",
   links: [
     {
-      label: "Github link",
       url: "https://github.com/SophieBatumbo",
-      iconPath: "assets/logos/github.png",
-      targetAttribute: "_blank"
+      targetAttribute: "_blank",
+      icon: {
+        path: "assets/logos/github.png",
+        description:'Github link',
+        hoverPath:"assets/logos/github-black.png"
+      }
     },
     {
-      label: "LinkedIn link",
       url: "https://www.linkedin.com/in/sophie-batumbo-4a288614b/",
-      iconPath: "assets/logos/linkedin.png",
-      targetAttribute: "_blank"
+      targetAttribute: "_blank",
+      icon: {
+        path: "assets/logos/linkedin.png",
+        description:'LinkedIn link',
+        hoverPath:"assets/logos/linkedin-black.png"
+      } 
     }
   ]
 };
@@ -180,16 +186,22 @@ export const mockContact: ContactSection = {
   openToWork: true,
   links: [
     {
-      label: "Github link",
       url: "https://github.com/SophieBatumbo",
-      iconPath: "assets/logos/github.png",
-      targetAttribute: "_blank"
+      targetAttribute: "_blank",
+      icon: {
+        path: "assets/logos/github.png",
+        description:'Github link',
+        hoverPath:"assets/logos/github-black.png"
+      }
     },
     {
-      label: "LinkedIn link",
       url: "https://www.linkedin.com/in/sophie-batumbo-4a288614b/",
-      iconPath: "assets/logos/linkedin.png",
-      targetAttribute: "_blank"
+      targetAttribute: "_blank",
+      icon: {
+        path: "assets/logos/linkedin.png",
+        description:'LinkedIn link',
+        hoverPath:"assets/logos/linkedin-black.png"
+      } 
     }
   ]
 };

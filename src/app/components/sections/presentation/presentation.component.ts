@@ -3,13 +3,14 @@ import { ButtonComponent } from '../../common/button/button.component';
 import { DownloadFile, PresentationSection } from '../../../models/model';
 import { DataService } from '../../../services/data.service';
 import { InViewportDirective } from '../../../directives/in-viewport.directive';
-import { AsyncPipe, NgIf } from '@angular/common';
+import { AsyncPipe, NgFor, NgIf } from '@angular/common';
 import { Observable } from 'rxjs';
+import { MouseHoverDirective } from '../../../directives/mouse-hover.directive';
 
 @Component({
   selector: 'app-presentation',
   standalone: true,
-  imports: [ButtonComponent, InViewportDirective, AsyncPipe, NgIf],
+  imports: [ButtonComponent, InViewportDirective, AsyncPipe, NgIf, NgFor, MouseHoverDirective],
   templateUrl: './presentation.component.html',
   styleUrl: './presentation.component.scss'
 })

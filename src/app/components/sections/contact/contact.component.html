@@ -6,15 +6,20 @@
       <p class="who">{{ contact.who }}​</p>
       <span class="mail">
         <p>{{ contact.mail }}</p>
-        <img src="assets/icons/copy.png" alt="copy text icon" (click)="copyMail()" (keypress.enter)="copyMail()" tabindex="0">
+        <img src="assets/icons/copy.png" alt="copy text icon" 
+        (click)="copyMail()" (keypress.enter)="copyMail()" tabindex="0">
       </span>
       <span class="open">
-        <p>Open for opportunities :</p><p *ngIf="contact.openToWork; else elseBlock">Yes</p><ng-template #elseBlock>No</ng-template>
+        <p>Open for opportunities :</p>
+        <p *ngIf="contact.openToWork; else elseBlock">Yes</p>
+        <ng-template #elseBlock>No</ng-template>
       </span>
     </span>
     <span class="logos" >
-      <a href="https://github.com/SophieBatumbo" target="_blank"><img class="git" src="assets/logos/github.png" alt="github link"></a>
-      <a href="https://www.linkedin.com/in/sophie-batumbo-4a288614b/" target="_blank"><img class="linkedin" src="assets/logos/linkedin.png" alt="linkedin link"></a>
+      <a *ngFor="let link of contact.links" href="{{link.url}}" target="{{link.targetAttribute}}" appMouseHover>
+        <img src="{{link.icon.path}}" alt="{{link.icon.description}}">
+        <img src="{{link.icon.hoverPath}}" alt="{{link.icon.description}}">
+      </a>
     </span>
   </section>
 </section>

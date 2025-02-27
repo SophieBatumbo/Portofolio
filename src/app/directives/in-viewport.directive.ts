@@ -17,7 +17,7 @@ export class InViewportDirective implements AfterViewInit {
           this.renderer.addClass(this.elem.nativeElement, 'visible');
         }
       });
-    }, { threshold: this.treshold }); // Détecte quand 50% de l'élément est visible
+    }, { threshold: this.treshold }); 
 
     observer.observe(this.elem.nativeElement);
   }
