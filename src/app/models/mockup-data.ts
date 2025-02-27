@@ -3,8 +3,8 @@ import { DownloadFile, Education, Experience, Presentation, Projects, Skills } f
 export const mockPresentation: Presentation = {
   title: "Hi all, I'm Sophie",
   description: "Curious and dedicated to web development, I design modern and responsive user interfaces. I focus on providing a seamless and intuitive user experience, ensuring that every detail improves usability and accessibility.",
-  illustrationPath: "assets/illustrations-sections/presentation.png",
-  illustrationDesc: "Illustration of a web developerworking on projet."
+  illustrationPath: "assets/illustrations-sections/presentation.webp",
+  illustrationDesc: "Illustration of a web developer working on projet."
 };
 
 export const mockSkills: Skills = 
@@ -22,8 +22,8 @@ export const mockSkills: Skills =
     "Angular step: NgBootstrap open source design system, sooo interesting, but needed to learn about integration.", 
     "Personnal project step : new skills and challenges as architecture, components' tree, and apply fresh knowledge.",
     "Web integration step : after CMA mission, SASS and CSS are now my besties ❤️. I'm ready to be an Angular developer !"],
-  illustrationPath: "assets/illustrations-sections/skills.png",
-  illustrationDesc: "Illustration du développement frontend."
+  illustrationPath: "assets/illustrations-sections/skills.webp",
+  illustrationDesc: "Illustration of frontend development."
 };
 
 export const mockProjects: Projects = 
@@ -61,7 +61,7 @@ export const mockProjects: Projects =
       size: 12.96
     }
   ],
-  illustrationPath: "assets/illustrations-sections/projects.png",
+  illustrationPath: "assets/illustrations-sections/projects.webp",
   illustrationDesc: "Capture d'écran du portfolio."
 };
 
