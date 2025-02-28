@@ -5,10 +5,10 @@ import { Component, Input } from '@angular/core';
   selector: 'app-card',
   standalone: true,
   imports: [NgFor, CommonModule, DecimalPipe],
-  templateUrl: './card.component.html',
-  styleUrl: './card.component.scss'
+  templateUrl: './project-card.component.html',
+  styleUrl: './project-card.component.scss'
 })
-export class CardComponent {
+export class ProjectCardComponent {
   @Input() logoPath!: string;
   @Input() title!: string;
   @Input() link!: string;

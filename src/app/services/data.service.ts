@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
-import { mockContact, mockDownloadFile, mockEducation, mockExperiences, mockPresentation, mockProjects, mockSkills } from '../models/mockup-data';
+import { mockContact, mockDownloadFile, mockEducation, mockExperiences, mockLogoPage, mockNavActions, mockPresentation, mockProjects, mockSkills } from '../models/mockup-data';
 import { Observable, of } from 'rxjs';
-import { ContactSection, DownloadFile, EducationSection, ExperienceSection, PresentationSection, ProjectSection, SkillSection } from '../models/model';
+import { ContactSection, DownloadFile, EducationSection, ExperienceSection, Illustration, PresentationSection, ProjectSection, SkillSection } from '../models/model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
+  getNavLogoData(): Observable<Illustration> {
+    return of(mockLogoPage);
+  }
 
   getPresentationData():Observable<PresentationSection>{
     return of(mockPresentation);
@@ -34,5 +37,9 @@ export class DataService {
 
   getDownloadFileData():Observable<DownloadFile>{
     return of(mockDownloadFile);
+  }
+
+  getNavActions():Observable<string[]>{
+    return of(mockNavActions);
   }
 }

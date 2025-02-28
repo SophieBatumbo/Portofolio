@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PresentationComponent } from "../../sections/presentation/presentation.component";
 import { DataService } from '../../../services/data.service';
-import { ContactSection, EducationSection, ExperienceSection, PresentationSection, ProjectSection, SkillSection } from '../../../models/model';
-import { WorkExperienceComponent } from "../../sections/work-experience/work-experience.component";
+import { ContactSection, DownloadFile, EducationSection, ExperienceSection, PresentationSection, ProjectSection, SkillSection } from '../../../models/model';
+import { ExperienceComponent } from "../../sections/experience/experience.component";
 import { SkillsComponent } from "../../sections/skills/skills.component";
 import { ProjectsComponent } from "../../sections/projects/projects.component";
 import { EducationComponent } from '../../sections/education/education.component';
@@ -15,7 +15,7 @@ import { Observable, of } from 'rxjs';
   standalone: true,
   imports: [
     PresentationComponent, 
-    WorkExperienceComponent, 
+    ExperienceComponent, 
     SkillsComponent, 
     ProjectsComponent, 
     EducationComponent, 
@@ -28,22 +28,24 @@ import { Observable, of } from 'rxjs';
 })
 export class BodyComponent implements OnInit {
 
-  presentationData!: Observable<PresentationSection>;
-  skillsData: Observable<SkillSection> = of();
-  experienceData: Observable<ExperienceSection> = of();
-  projectData: Observable<ProjectSection> = of();
-  educationData: Observable<EducationSection> = of();
-  contactData: Observable<ContactSection> = of();
+  presentationData$!: Observable<PresentationSection>;
+  downloadResumeData$!: Observable<DownloadFile>;
+  skillsData$: Observable<SkillSection> = of();
+  experienceData$: Observable<ExperienceSection> = of();
+  projectData$: Observable<ProjectSection> = of();
+  educationData$: Observable<EducationSection> = of();
+  contactData$: Observable<ContactSection> = of();
 
   constructor (private dataService: DataService) {}
 
   ngOnInit(){
-    this.presentationData = this.dataService.getPresentationData();
-    this.skillsData = this.dataService.getSkillsData();
-    this.experienceData = this.dataService.getWorkExperienceData();
-    this.projectData = this.dataService.getProjectsData();
-    this.educationData = this.dataService.getEducationData();
-    this.contactData = this.dataService.getContactData();
+    this.presentationData$ = this.dataService.getPresentationData();
+    this.downloadResumeData$ = this.dataService.getDownloadFileData();
+    this.skillsData$ = this.dataService.getSkillsData();
+    this.experienceData$ = this.dataService.getWorkExperienceData();
+    this.projectData$ = this.dataService.getProjectsData();
+    this.educationData$ = this.dataService.getEducationData();
+    this.contactData$ = this.dataService.getContactData();
   }
 
 }

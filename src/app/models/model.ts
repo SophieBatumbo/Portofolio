@@ -59,7 +59,7 @@ export interface PresentationSection extends Section {
 
 export interface SkillSection extends Section {
   logos: Logo[];
-  skills_names: string[];
+  skills: string[];
 }
 
 export interface ProjectSection extends Section {

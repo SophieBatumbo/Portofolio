@@ -2,6 +2,13 @@
   <h2>{{ education.title }}</h2>
   <section class="education-body">
     <app-timeline [education]="education.records"></app-timeline>
-    <img *ngIf="education.illustration" class="illus" src="{{ education.illustration.path }}" alt="{{ education.illustration.description }}" loading="eager" appInViewport>
+    <img 
+      *ngIf="education.illustration" 
+      class="illus" 
+      src="{{ education.illustration.path }}" 
+      alt="{{ education.illustration.description }}" 
+      loading="eager" 
+      appInViewport
+    >
   </section>
 </section>

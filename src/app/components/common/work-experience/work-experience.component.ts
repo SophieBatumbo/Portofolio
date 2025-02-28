@@ -4,10 +4,10 @@ import { Component, Input } from '@angular/core';
   selector: 'app-experience',
   standalone: true,
   imports: [],
-  templateUrl: './experience.component.html',
-  styleUrl: './experience.component.scss'
+  templateUrl: './work-experience.component.html',
+  styleUrl: './work-experience.component.scss'
 })
-export class ExperienceComponent {
+export class WorkExperienceComponent {
   @Input() company!: string;
   @Input() logoPath!: string;
   @Input() jobTitle!: string;
