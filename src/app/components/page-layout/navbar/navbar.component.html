@@ -1,16 +1,27 @@
 <nav>
     <section class="nav-logo">
-        <a href="#presentation"><img src="{{ logo?.path }}" alt="{{ logo?.description }}"></a>
-        <img class="close" src="assets/icons/close.svg" (click)="hideActions()" (keypress.enter)="hideActions()" alt="cross icon to close navbar" tabindex="0">
+        <a href="#presentation" *ngIf="logo">
+            <img [attr.src]="logo.path" [attr.alt]="logo.altText">
+        </a>
+        <div class="nav-menu-btn" 
+            (click)="toggleMenu()" 
+            (keypress.enter)="toggleMenu()" 
+            [ngClass]="{ 'open': isOpened }" 
+            tabindex="0">
+            <div class="nav-menu-btn-burger"></div>
+        </div>
     </section>
-    <section *ngIf="navActions" class="nav-actions">
+    <section 
+        *ngIf="navActions" 
+        class="nav-actions" 
+        class="nav-actions" 
+        [ngClass]="{ 'visible': isOpened, 'leave': !isOpened }" 
+        tabindex="0"
+    >
         <a href="#skills" class="action"> {{ navActions.at(0) }} </a>
         <a href="#workexperiences" class="action"> {{ navActions.at(1) }} </a>
         <a href="#projects" class="action"> {{ navActions.at(2) }} </a>
         <a href="#education" class="action"> {{ navActions.at(3) }} </a>
         <a href="#contact" class="action"> {{ navActions.at(4) }} </a>
-    </section>
-    <section class="nav-mobil">
-        <img src="assets/layout/bar.png" (click)="displayActions()" (keypress.enter)="displayActions()" alt="burger menu icon" tabindex="0">
     </section>
 </nav>

@@ -64,7 +64,7 @@ section#presentation {
       &.visible {
         animation-duration: 2s;
         animation-name: slideInFromLeft;
-        animation-fill-mode: forwards;
+        animation-fill-mode: both;
       }
     }
 
@@ -79,7 +79,7 @@ section#presentation {
       &.visible {
         animation-duration: 2s;
         animation-name: fadeIn;
-        animation-fill-mode: forwards;
+        animation-fill-mode: both;
       }
     }
   }

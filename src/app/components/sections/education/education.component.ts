@@ -12,5 +12,5 @@ import { NgIf } from '@angular/common';
   styleUrl: './education.component.scss'
 })
 export class EducationComponent {
-    @Input({required : true}) education!: EducationSection | null;
+    @Input() education!: EducationSection | null;
 }

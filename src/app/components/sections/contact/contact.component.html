@@ -16,9 +16,9 @@
       </span>
     </span>
     <span class="logos" >
-      <a *ngFor="let link of contact.links" href="{{link.url}}" target="{{link.targetAttribute}}" appMouseHover>
-        <img src="{{link.icon.path}}" alt="{{link.icon.description}}">
-        <img src="{{link.icon.hoverPath}}" alt="{{link.icon.description}}">
+      <a *ngFor="let link of contact?.links" [attr.href]="link.url" target="{{link.targetAttribute}}" appMouseHover>
+        <img *ngIf="link.icon" [attr.src]="link.icon.path" [attr.alt]="link.icon.altText">
+        <img *ngIf="link.icon" [attr.src]="link.icon.hoverPath" [attr.alt]="link.icon.altText">
       </a>
     </span>
   </section>

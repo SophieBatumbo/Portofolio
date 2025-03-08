@@ -1,10 +1,27 @@
-<main>
-    <app-presentation *ngIf="presentationData$" 
-    class="presentation" [presentation]="presentationData$ | async" 
-    [downloadFile]="downloadResumeData$ | async" ></app-presentation>
-    <app-skills class="skills" [skills]="skillsData$ | async"></app-skills>
-    <app-work-experience class="work-experiences" [experienceSection]="experienceData$ | async"></app-work-experience>
-    <app-projects class="projects" [projectSection]="projectData$ | async"></app-projects>
-    <app-education class="education" [education]="educationData$ | async"></app-education>
-    <app-contact [contact]="contactData$ | async" ></app-contact>
+<main class="page-content">
+    <ng-container *ngIf="{ 
+        presentation: presentationData$ | async, 
+        downloadFile: downloadResumeData$ | async,
+        skills: skillsData$ | async,
+        experience: experienceData$ | async,
+        projects: projectData$ | async,
+        education: educationData$ | async,
+        contact: contactData$ | async
+    } as data">
+        <app-presentation class="presentation" 
+            [presentation]="data.presentation" 
+            [downloadFile]="data.downloadFile" >
+        </app-presentation>
+        <app-skills class="skills" [skills]="data.skills"></app-skills>
+        <app-work-experience class="work-experiences" 
+            [experienceSection]="data.experience">
+        </app-work-experience>
+        <app-projects class="projects" 
+            [projectSection]="data.projects">
+        </app-projects>
+        <app-education class="education" 
+            [education]="data.education">
+        </app-education>
+        <app-contact [contact]="data.contact" ></app-contact>
+    </ng-container>
 </main>

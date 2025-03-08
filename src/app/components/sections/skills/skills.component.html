@@ -1,15 +1,26 @@
 <section class="skills" id="skills" *ngIf="skills">
-   <img *ngIf="skills.illustration" class="skills-illus" src="{{ skills.illustration.path }}" alt="{{ skills.illustration.description }}" loading="eager" appInViewport [treshold]="0.1">
+   <img 
+    *ngIf="skills.illustration" 
+    class="skills-illus" 
+    [attr.src]="skills.illustration.path" 
+    [attr.alt]="skills.illustration.altText" 
+    loading="eager" appInViewport 
+    [treshold]="0.1"
+   >
    <section class="skills-desc" appInViewport [treshold]="0.05">
         <h2 class="title" *ngIf="skills.title">{{ skills.title }}</h2>
         <section class="logos-and-skills-list">
             <section class="logos" >
-                <span *ngFor="let logo of skills.logos">
-                    <img src="{{ logo.path }}" alt="logo of hard skills" loading="lazy">
-                    <legend>{{ logo.legend }}</legend>
+                <span *ngFor="let logo of skills?.logos">
+                    <img [attr.src]="logo.path" alt="logo of hard skills" loading="lazy">
+                    <figcaption>{{ logo.legend }}</figcaption>
                 </span>
             </section>
-            <ul class="skills-list"><li *ngFor="let skill of skills.skills"> {{ skill }} </li></ul>
+            <ul class="skills-list">
+                <li *ngFor="let skill of skills?.skills" class="skills-list-elem">
+                   <span class="skills-list-elem-title"> {{ skill.title }}</span> : <span class="skills-list-elem-desc"> {{ skill.description }} </span>
+                </li>
+            </ul>
         </section>
     </section>
 </section>

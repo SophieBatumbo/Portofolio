@@ -8,7 +8,7 @@ import { ProjectsComponent } from "../../sections/projects/projects.component";
 import { EducationComponent } from '../../sections/education/education.component';
 import { ContactComponent } from "../../sections/contact/contact.component";
 import { AsyncPipe, NgIf } from '@angular/common';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-body',
@@ -30,11 +30,11 @@ export class BodyComponent implements OnInit {
 
   presentationData$!: Observable<PresentationSection>;
   downloadResumeData$!: Observable<DownloadFile>;
-  skillsData$: Observable<SkillSection> = of();
-  experienceData$: Observable<ExperienceSection> = of();
-  projectData$: Observable<ProjectSection> = of();
-  educationData$: Observable<EducationSection> = of();
-  contactData$: Observable<ContactSection> = of();
+  skillsData$!: Observable<SkillSection>;
+  experienceData$!: Observable<ExperienceSection>;
+  projectData$!: Observable<ProjectSection>;
+  educationData$!: Observable<EducationSection>;
+  contactData$!: Observable<ContactSection>;
 
   constructor (private dataService: DataService) {}
 

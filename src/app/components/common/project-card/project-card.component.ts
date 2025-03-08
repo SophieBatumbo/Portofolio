@@ -1,10 +1,11 @@
 import { CommonModule, DecimalPipe, NgFor } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { ShortNumberPipe } from '../../../pipes/short-number.pipe';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [NgFor, CommonModule, DecimalPipe],
+  imports: [NgFor, CommonModule, DecimalPipe, ShortNumberPipe],
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.scss'
 })
@@ -15,6 +16,6 @@ export class ProjectCardComponent {
   @Input() description!: string;
   @Input() keyPoints!: string[];
   @Input() technos!: {name: string, color: string}[];
-  @Input() forkNumber!: string;
+  @Input() forkNumber!: number;
   @Input() size!: number;
 }

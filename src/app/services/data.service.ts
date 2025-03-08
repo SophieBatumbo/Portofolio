@@ -1,45 +1,50 @@
 import { Injectable } from '@angular/core';
 import { mockContact, mockDownloadFile, mockEducation, mockExperiences, mockLogoPage, mockNavActions, mockPresentation, mockProjects, mockSkills } from '../models/mockup-data';
-import { Observable, of } from 'rxjs';
+import { delay, Observable, of } from 'rxjs';
 import { ContactSection, DownloadFile, EducationSection, ExperienceSection, Illustration, PresentationSection, ProjectSection, SkillSection } from '../models/model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
+
+  private getMockData<T>(data: T): Observable<T> {
+    return of(data).pipe(delay(500));
+  }
+
   getNavLogoData(): Observable<Illustration> {
-    return of(mockLogoPage);
+    return this.getMockData(mockLogoPage);
   }
 
   getPresentationData():Observable<PresentationSection>{
-    return of(mockPresentation);
+    return this.getMockData(mockPresentation);
   }
 
   getSkillsData():Observable<SkillSection>{
-    return of(mockSkills);
+    return this.getMockData(mockSkills);
   }
 
   getWorkExperienceData():Observable<ExperienceSection>{
-    return of(mockExperiences);
+    return this.getMockData(mockExperiences);
   }
 
   getProjectsData():Observable<ProjectSection>{
-    return of(mockProjects);
+    return this.getMockData(mockProjects);
   }
 
   getEducationData():Observable<EducationSection>{
-    return of(mockEducation);
+    return this.getMockData(mockEducation);
   }
 
   getContactData():Observable<ContactSection>{
-    return of(mockContact);
+    return this.getMockData(mockContact);
   }
 
   getDownloadFileData():Observable<DownloadFile>{
-    return of(mockDownloadFile);
+    return this.getMockData(mockDownloadFile);
   }
 
   getNavActions():Observable<string[]>{
-    return of(mockNavActions);
+    return this.getMockData(mockNavActions);
   }
 }

@@ -1,6 +1,6 @@
 export interface Illustration {
   path: string;
-  description: string;
+  altText: string;
   hoverPath?: string;
 }
 
@@ -21,7 +21,7 @@ export interface ProjectCard {
   description: string;
   keyPoints: string[];
   technos: {name: string, color: string}[];
-  forkNumber: string;
+  forkNumber: number;
   size: number;
 }
 
@@ -47,7 +47,12 @@ export interface DownloadFile {
 export interface Link {
   url: string;
   targetAttribute: "_self" | "_blank";
-  icon: Illustration;
+  icon?: Illustration;
+}
+
+export interface Skill {
+  title: string;
+  description: string;
 }
 
 /** SECTIONS **/
@@ -59,7 +64,7 @@ export interface PresentationSection extends Section {
 
 export interface SkillSection extends Section {
   logos: Logo[];
-  skills: string[];
+  skills: Skill[];
 }
 
 export interface ProjectSection extends Section {

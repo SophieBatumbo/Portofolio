@@ -5,8 +5,8 @@
     <img 
       *ngIf="education.illustration" 
       class="illus" 
-      src="{{ education.illustration.path }}" 
-      alt="{{ education.illustration.description }}" 
+      [attr.src]="education.illustration.path" 
+      [attr.alt]="education.illustration.altText" 
       loading="eager" 
       appInViewport
     >

@@ -8,7 +8,7 @@
   &.visible {
     animation-duration: 2s;
     animation-name: slideUp;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
   }
 }
 
@@ -17,7 +17,7 @@
   flex-direction: column;
   padding: 2rem;
   box-shadow: 0 10px 30px -15px #0003;
-  height: 216px;
+  height: 208px;
   gap: 4px;
 
   &:hover {
@@ -55,13 +55,14 @@
 
       > li {
         display: flex;
+        font-style: italic;
+        font-size: 15px;
 
         &::before {
-          display: block;
-          content: url(../../../../assets/icons/sparkles.svg);
-          width: 16px;
-          padding-right: 8px;
-          flex-shrink: 0;
+          content: '👉🏾';
+          display: inline-block;
+          width: 0.75em;
+          margin-right: 0.85em;
         }
       }
     }

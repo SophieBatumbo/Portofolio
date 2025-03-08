@@ -83,7 +83,7 @@ section.contact {
   &.visible {
     animation-duration: 2s;
     animation-name: slideUp;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
   }
 }
 

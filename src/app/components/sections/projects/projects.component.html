@@ -2,7 +2,7 @@
   <h2 class="title">{{ projectSection.title }}</h2>
   <section class="projects">
     <section class="projects-desc">
-      <app-card *ngFor="let card of projectSection.projects" 
+      <app-card *ngFor="let card of projectSection?.projects" 
       [logoPath]="card.logoPath" 
       [title]="card.title"
       [link]="card.link" 
@@ -13,8 +13,8 @@
       [size]="card.size" appInViewport></app-card>
     </section>
     <img *ngIf="projectSection.illustration" class="projects-illus" 
-      src="{{ projectSection.illustration.path }}" 
-      alt="{{ projectSection.illustration.description }}" 
+      [attr.src]="projectSection.illustration.path" 
+      [attr.alt]="projectSection.illustration.altText" 
       loading="eager" 
       appInViewport
     >

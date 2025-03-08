@@ -22,7 +22,7 @@ section#education{
       &.visible {
         animation-duration: 2s;
         animation-name: fadeIn;
-        animation-fill-mode: forwards;
+        animation-fill-mode: both;
       }
     }
   }

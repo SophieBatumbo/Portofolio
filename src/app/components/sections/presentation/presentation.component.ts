@@ -14,6 +14,6 @@ import { MouseHoverDirective } from '../../../directives/mouse-hover.directive';
 })
 export class PresentationComponent {
 
-  @Input({required : true}) presentation!: PresentationSection | null;
-  @Input({required : true}) downloadFile!: DownloadFile | null;
+  @Input() presentation!: PresentationSection | null;
+  @Input() downloadFile!: DownloadFile | null;
 }

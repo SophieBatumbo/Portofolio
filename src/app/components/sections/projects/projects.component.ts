@@ -12,5 +12,5 @@ import { InViewportDirective } from '../../../directives/in-viewport.directive';
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
-  @Input({required : true}) projectSection!: ProjectSection | null;
+  @Input() projectSection!: ProjectSection | null;
 }

@@ -12,27 +12,27 @@ section#workexperiences {
     // BEWARE : here we add css to each experience card manually,so if you add anything think to actualize here or to make a function in JS
     > :first-child.visible {
       animation: fadeIn 1s 0s 1;
-      animation-fill-mode: forwards;
+      animation-fill-mode: both;
     }
     > :nth-child(2).visible {
       animation: fadeIn 1s 0.25s 1;
-      animation-fill-mode: forwards;
+      animation-fill-mode: both;
     }
     > :nth-child(3).visible {
       animation: fadeIn 1s 0.5s 1;
-      animation-fill-mode: forwards;
+      animation-fill-mode: both;
     }
     > :nth-child(4).visible {
       animation: fadeIn 1s 0s 1; // 0.75
-      animation-fill-mode: forwards;
+      animation-fill-mode: both;
     }
     > :nth-child(5).visible {
       animation: fadeIn 1s 0.25s 1; // 0.80
-      animation-fill-mode: forwards;
+      animation-fill-mode: both;
     }
     > :nth-child(6).visible {
       animation: fadeIn 1s 0.5s 1; // 0.90
-      animation-fill-mode: forwards;
+      animation-fill-mode: both;
     }
   }
 

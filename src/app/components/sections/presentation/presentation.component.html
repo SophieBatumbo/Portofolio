@@ -8,12 +8,12 @@
       <p class="description">{{ presentation.description }}</p>
     </section>
     <section class="logos">
-      <a *ngFor="let link of presentation.links"
-        href="{{ link.url }}"
+      <a *ngFor="let link of presentation?.links"
+        [attr.href]="link.url"
         target="{{ link.targetAttribute }}"
         appMouseHover>
-        <img src="{{ link.icon.path }}" alt="{{ link.icon.description }}" />
-        <img src="{{ link.icon.hoverPath }}" alt="{{ link.icon.description }}"/>
+        <img *ngIf="link.icon" [attr.src]="link.icon.path" [attr.alt]="link.icon.altText" />
+        <img *ngIf="link.icon" [attr.src]="link.icon.hoverPath" [attr.alt]="link.icon.altText"/>
       </a>
     </section>
     <section class="buttons">
@@ -28,8 +28,8 @@
   <img
     *ngIf="presentation.illustration"
     class="presentation-illus"
-    src="{{ presentation.illustration.path }}"
-    alt="{{ presentation.illustration.description }}"
+    [attr.src]="presentation.illustration.path"
+    [attr.alt]="presentation.illustration.altText"
     loading="eager"
     appInViewport
   />

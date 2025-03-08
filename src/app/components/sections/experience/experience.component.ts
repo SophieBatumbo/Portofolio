@@ -12,5 +12,5 @@ import { InViewportDirective } from '../../../directives/in-viewport.directive';
   styleUrl: './experience.component.scss'
 })
 export class ExperienceComponent {
-  @Input({required : true}) experienceSection!: ExperienceSection | null;
+  @Input() experienceSection!: ExperienceSection | null;
 }

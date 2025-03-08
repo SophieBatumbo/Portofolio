@@ -15,12 +15,12 @@
     .logos-and-skills-list {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 6px;
     }
 
     .logos {
       display: flex;
-      gap: 20px;
+      gap: 28px;
       justify-content: center;
 
       span {
@@ -32,21 +32,21 @@
       }
 
       img {
-        height: 68px;
+        height: 64px;
         filter: grayscale(100%);
 
         &:hover {
           filter: none;
           transform: translateY(-2px);
 
-          +legend {
+          +figcaption {
             font-weight: 700;
           }
         }
       }
 
-      legend {
-        font-size: 16px;
+      figcaption {
+        font-size: 15px;
         color: #868e96 ;
       }
     }
@@ -60,7 +60,7 @@
       animation-duration: 2s;
       animation-name: slideInFromRight;
       opacity: 1;
-      animation-fill-mode: forwards;
+      animation-fill-mode: both;
     }
   }
 
@@ -78,7 +78,7 @@
     &.visible {
       animation-duration: 2s;
       animation-name: slideInFromLeft;
-      animation-fill-mode: forwards;
+      animation-fill-mode: both;
     }
   }
 
@@ -86,20 +86,27 @@
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 6px;
     padding-left: 0;
     font-size: 19px;
     color: #868e96;
 
-    > li {
-      display: flex;
-    }
-    > li::before {
-      display: block;
-      content: url(../../../../assets/icons/decorator-circle-basic.svg);
-      width: 12px;
-      padding-right: 8px;
-      flex-shrink: 0;
+    &-elem {
+      &::before {
+        content: '👉🏾';
+        display: inline-block;
+        width: 0.75em;
+        margin-right: 0.5em;
+      }
+
+      &-title {
+        font-weight: 700;
+        text-transform: capitalize;
+      }
+
+      &-desc {
+        font-style: italic;
+      }
     }
   }
 
@@ -150,13 +157,22 @@
     }
 
     &-list {
+      gap: 30px;
       text-align: center;
+
+      > li::before {
+        padding-right: 4px;
+      }
     }
   }
 
   @media screen and (min-width: 1260px) {
     &-list {
       line-height: 40px;
+
+      > li::before {
+        align-self: center;
+      }
     }
   }
 }
