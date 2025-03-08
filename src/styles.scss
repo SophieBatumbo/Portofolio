@@ -76,17 +76,17 @@ html, body {
 
 @keyframes slideUp {
   from {
-    transform: translateY(17%);
+    transform: translateY(0%);
   }
 
   to {
-    transform: translateY(0%);
+    transform: translateY(-3%);
   }
 }
 
 @keyframes slideDown {
   from {
-    transform: translateY(-15%);
+    transform: translateY(-10%);
   }
 
   to {
