@@ -2,7 +2,7 @@ import { fakeAsync, TestBed, tick } from '@angular/core/testing';
 
 import { DataService } from './data.service';
 import { mockLogoPage, mockPresentation, mockSkills, mockExperiences, mockProjects, mockEducation, mockContact, mockDownloadFile, mockNavActions } from '../models/mockup-data';
-import { Illustration, PresentationSection, SkillSection, ExperienceSection, ProjectSection, EducationSection, ContactSection, DownloadFile } from '../models/model';
+import { Illustration, PresentationSection, SkillSection, ExperienceSection, ProjectSection, EducationSection, ContactSection, DownloadFile, NavAction } from '../models/model';
 
 describe('DataService', () => {
   let service: DataService;
@@ -109,7 +109,7 @@ describe('DataService', () => {
 
   describe('getNavActions()', () => {
     it('should return mock navigation actions data', fakeAsync(() => {
-      let result: string[] | undefined;
+      let result: NavAction[] | undefined;
       service.getNavActions().subscribe((data) => (result = data));
 
       tick(500);
