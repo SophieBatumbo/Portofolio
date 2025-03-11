@@ -1,4 +1,12 @@
-section, p, a, span, footer {
+/* COLORS VARIABLES */
+
+$primary-color: #9d6a53;
+$grey-dark: #868e96;
+
+
+/* STYLE */
+
+section, li, p, a, span, footer {
   font-family: 'Manrope', sans-serif;
 }
 
@@ -9,6 +17,7 @@ h1, h2 {
 h1 {
   font-size: 70px;
   line-height: 68px;
+  margin-bottom: 48px;
 }
 
 h2 {
@@ -23,6 +32,38 @@ h3, h4, h5, h6, p {
 html, body { 
   height: 100%; 
   margin: 0;
+}
+
+body > :first-child:has(.page-loader) {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .page-loader {
+    width: 424px;
+  }
+
+  h1 {
+    font-size: 40px;
+    font-weight: 900;
+    color: $primary-color;
+    margin: -76px 0 0 0;
+  }
+
+  @media screen and (max-width: 760px) {
+    gap: 24px;
+    
+    .page-loader {
+      width: 248px;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+  }
 }
 
 /* RESPONSIVE */
@@ -93,4 +134,3 @@ html, body {
     transform: translateY(0%);
   }
 }
-

@@ -1,14 +1,17 @@
-
-<button *ngIf="downloadFile && !mail && action" aria-labelledby="actionBtn">
-    <a id="actionBtn" [href]="downloadFile.url" target="_blank" [download]="downloadFile.name">
-        {{ action }}
+<button *ngIf="action" [attr.aria-label]="action" [ngClass]="{'small' : isSmall}">
+    <span *ngIf="pictogramPath" class="icon">
+        <img [src]="pictogramPath" alt="Button Icon">
+    </span>
+    <a *ngIf="downloadFile" [href]="downloadFile.url" target="_blank" [download]="downloadFile.name">
+      {{ action }}
     </a>
-</button>
-<button *ngIf="!downloadFile && !mail && action" aria-labelledby="actionBtn1">
-    <span id="actionBtn1">{{ action }}</span>
-</button>
-<button *ngIf="!downloadFile && mail && action" aria-labelledby="actionBtn2">
-    <a id="actionBtn2" href="mailto: sophie.bat@hotmail.fr">
-        {{ action }}
+    <a *ngIf="isMailTo && !downloadFile" href="mailto:sophie.bat@hotmail.fr">
+      {{ action }}
     </a>
+    <a *ngIf="isExternalLink && externalLink && !downloadFile && !isMailTo" [href]="externalLink" target="_blank">
+      {{ action }}
+    </a>
+    <span *ngIf="!isMailTo && !downloadFile && !isExternalLink ">
+      {{ action }}
+    </span>
 </button>

@@ -1,14 +1,14 @@
 <section *ngIf="education" class="education" id="education">
-  <h2>{{ education.title }}</h2>
+  <img 
+    *ngIf="education.illustration" 
+    class="illus" 
+    [attr.src]="education.illustration.path" 
+    [attr.alt]="education.illustration.altText" 
+    loading="eager" 
+    appInViewport
+  >
   <section class="education-body">
+    <h2>{{ education.title }}</h2>
     <app-timeline [education]="education.records"></app-timeline>
-    <img 
-      *ngIf="education.illustration" 
-      class="illus" 
-      [attr.src]="education.illustration.path" 
-      [attr.alt]="education.illustration.altText" 
-      loading="eager" 
-      appInViewport
-    >
   </section>
 </section>

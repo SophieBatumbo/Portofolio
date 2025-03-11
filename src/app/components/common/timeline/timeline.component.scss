@@ -1,3 +1,5 @@
+@import "../../../../styles.scss";
+
 .timeline {
   .diploma {
     font-size: 22px;
@@ -5,7 +7,7 @@
   }
 
   .establishment {
-    color: #868e96;
+    color: $grey-dark;
     font-size: 18px;
   }
 

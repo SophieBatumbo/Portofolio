@@ -2,6 +2,7 @@ section#projects {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  padding-top: 100px;
 
   .projects {
     display: flex;
@@ -12,12 +13,11 @@ section#projects {
       flex-wrap: wrap;
       gap: 16px;
       align-content: center;
-      justify-content: center;
     }
 
     &-illus {
-      max-width: 590px;
-      max-height: 590px;
+      max-width: 500px;
+      max-height: 500px;
       height: fit-content;
       align-self: center;
 
@@ -47,6 +47,10 @@ section#projects {
       &-illus {
         width: 95%;
         align-self: center;
+      }
+
+      &-desc {
+        justify-content: center;
       }
     }
   }

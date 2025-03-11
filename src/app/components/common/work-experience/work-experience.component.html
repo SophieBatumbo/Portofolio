@@ -9,7 +9,12 @@
       <span>{{ period }}</span>
     </section>
     <section class="body-desc">
-      {{ description }}
+      <p>{{ description }}</p>
+      <ul *ngIf="skillsLogos" class="body-desc-skills-logos">
+        <li *ngFor="let logo of skillsLogos" class="body-desc-skills-logos-item">
+          <img [src]="logo.path" [alt]="logo.altText" loading="lazy">
+       </li>
+      </ul>
     </section>
   </section>
 </section>

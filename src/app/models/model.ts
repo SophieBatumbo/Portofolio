@@ -37,6 +37,7 @@ export interface WorkExperience {
   jobTitle: string;
   period: string;
   description: string;
+  skillsLogos?: Illustration[];
 }
 
 export interface DownloadFile {
@@ -53,6 +54,11 @@ export interface Link {
 export interface Skill {
   title: string;
   description: string;
+}
+
+export interface NavAction {
+  title: string;
+  anchor: string;
 }
 
 /** SECTIONS **/

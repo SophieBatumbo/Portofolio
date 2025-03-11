@@ -3,7 +3,7 @@
     <section class="title-and-desc">
       <h1 class="title">
         {{ presentation.title }}
-        <img src="assets/icons/hand.svg" alt="hand icon" />
+      <!--  <img src="assets/icons/hand.svg" alt="hand icon" />-->
       </h1>
       <p class="description">{{ presentation.description }}</p>
     </section>
@@ -17,10 +17,15 @@
       </a>
     </section>
     <section class="buttons">
-      <app-button [action]="'Contact me'" [mail]="true"></app-button>
+      <app-button 
+        [action]="'Contact me'" 
+        [isMailTo]="true"
+        [pictogramPath]="'assets/icons/external-link.png'">
+      </app-button>
       <app-button
-        [action]="'Download my resume'"
+        [action]="'Download resume'"
         [downloadFile]="downloadFile"
+        [pictogramPath]="'assets/icons/download.png'"
       ></app-button>
     </section>
   </section>

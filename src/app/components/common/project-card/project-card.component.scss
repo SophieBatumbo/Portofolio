@@ -1,5 +1,5 @@
 :host {
-  flex: 0 1 458px;
+  flex: 0 1 530px;
 
   &:not(.visible) {
     transform: translateY(17%);
@@ -16,13 +16,16 @@
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  box-shadow: 0 10px 30px -15px #0003;
-  height: 208px;
+  // box-shadow: 0 10px 30px -15px #0003; 
+  /* These comments stay in case we add interaction clicking on the card (to show more, visualizer or numeral data ie.)*/
+  border: solid 1px #0003;
+  border-radius: 6px;
+  height: 176px;
   gap: 4px;
 
-  &:hover {
+  /*&:hover {
     box-shadow: 0 20px 30px -10px #0003;
-  }
+  }*/
 
   &-header {
     display: flex;
@@ -45,18 +48,22 @@
   &-description {
     color: #586069;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 
-    p {
+    &-text {
       overflow: hidden;
     }
 
-    ul {
+    &-keypoints {
       list-style-type: none;
+      margin: 0;
 
       > li {
         display: flex;
         font-style: italic;
-        font-size: 15px;
+        font-size: 14px;
 
         &::before {
           content: '👉🏾';
@@ -101,6 +108,10 @@
       }
     }
 
+    .size {
+      align-self: center;
+    }
+
     .badge {
       border-radius: 100%;
       height: 9px;
@@ -118,17 +129,39 @@
       }
     }
   }
+}
 
-  @media screen and (max-width: 760px) {
-    height: 72px;
+@media screen and (max-width: 1260px) {
+  :host {
+    flex-basis: 49%;
+  }
+
+  .card {
+    height: auto;
+    gap: 8px;
 
     &-description {
-      overflow: hidden;
-      text-overflow: ellipsis;
+      &-text {
+        overflow: hidden;
+        height: 24px;
+        text-overflow: ellipsis;
+      }
+
+      &-keypoints {
+        display: none;
+      }
     }
 
     &-technical-infos {
       font-size: 10px;
+      flex-direction: column;
+      gap: 24px;
     }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  :host {
+    flex-basis: auto;
   }
 }

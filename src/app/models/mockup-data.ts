@@ -1,4 +1,4 @@
-import { ContactSection, DownloadFile, EducationSection, ExperienceSection, Illustration, PresentationSection, ProjectSection, SkillSection } from "./model";
+import { ContactSection, DownloadFile, EducationSection, ExperienceSection, Illustration, NavAction, PresentationSection, ProjectSection, SkillSection } from "./model";
 
 export const mockLogoPage: Readonly<Illustration> = {
   path: "assets/layout/logo.png",
@@ -37,7 +37,7 @@ export const mockPresentation: Readonly<PresentationSection> = {
 
 export const mockSkills: Readonly<SkillSection> = 
 {
-  title: "My skills",
+  title: "Skills",
   illustration: {
     path: "assets/illustrations-sections/skills.webp",
     altText: "Illustration of frontend development."
@@ -48,7 +48,10 @@ export const mockSkills: Readonly<SkillSection> =
     {path: "assets/logos/technos/html.webp", legend:"HTML5"}, 
     {path: "assets/logos/technos/css.webp", legend:"CSS3"}, 
     {path: "assets/logos/technos/sass.webp", legend:"SASS"}, 
+    {path: "assets/logos/technos/ngb.webp", legend:"NGBootstrap"},
     {path: "assets/logos/technos/github.webp", legend:"GitHub"},
+    {path: "assets/logos/technos/bitbucket.svg", legend:"Bitbucket"},
+    {path: "assets/logos/technos/gitlab.svg", legend:"GitLab"},
     {path: "assets/logos/technos/karma.webp", legend:"Karma"}, 
     {path: "assets/logos/technos/jasmine.webp", legend:"Jasmine"}
   ],
@@ -61,49 +64,84 @@ export const mockSkills: Readonly<SkillSection> =
 };
 
 export const mockExperiences: Readonly<ExperienceSection> = {
-  title: "Working experiences",
+  title: "Experiences",
   experiences: [
     {
       company: "CMA CGM",
-      logoPath: "assets/logos/companies/cma.png",
+      logoPath: "assets/logos/companies/cma.webp",
       jobTitle: "Web Developper",
       period: "Sep 2023 - Oct 2024",
-      description: "Development of design system, mockups implementation with UX/UI designers."
+      description: "Development of design system, mockups implementation with UX/UI designers.",
+      skillsLogos: [
+        {path: "assets/logos/technos/html.webp", altText:"HTML5 logo"}, 
+        {path: "assets/logos/technos/css.webp", altText:"CSS3 logo"}, 
+        {path: "assets/logos/technos/sass.webp", altText:"SASS logo"}, 
+        {path: "assets/logos/technos/gitlab.svg", altText:"GitLab"}
+      ]
     },
     {
       company: "Amadeus",
-      logoPath: "assets/logos/companies/amadeus-blue.png",
+      logoPath: "assets/logos/companies/amadeus-blue.webp",
       jobTitle: "Web Developper",
       period: "Feb 2023 - Aug 2023",
-      description: "Development of design system, unit and e2e tests, support users of the design system."
+      description: "Development of design system, unit and e2e tests, support users of the design system.",
+      skillsLogos: [
+        {path: "assets/logos/technos/angular.webp", altText:"Angular logo"}, 
+        {path: "assets/logos/technos/html.webp", altText:"HTML5 logo"}, 
+        {path: "assets/logos/technos/css.webp", altText:"CSS3 logo"}, 
+        {path: "assets/logos/technos/sass.webp", altText:"SASS logo"}, 
+        {path: "assets/logos/technos/ngb.webp", altText:"NGBootstrap logo"},
+        {path: "assets/logos/technos/github.webp", altText:"GitHub logo"},
+        {path: "assets/logos/technos/bitbucket.svg", altText:"Bitbucket logo"},
+        {path: "assets/logos/technos/karma.webp", altText:"Karma logo"}, 
+        {path: "assets/logos/technos/jasmine.webp", altText:"Jasmine logo"}
+      ]
     },
     {
       company: "Naval Group",
-      logoPath: "assets/logos/companies/navalgroup.png",
+      logoPath: "assets/logos/companies/navalgroup.webp",
       jobTitle: "Project Engeneer",
       period: "Aug 2022 - Dec 2022",
       description: "Assisting and supporting clients via a service center, automating data procesing in VBA."
     },
     {
       company: "Dassault Systemes",
-      logoPath: "assets/logos/companies/3ds.png",
+      logoPath: "assets/logos/companies/3ds.webp",
       jobTitle: "Web Developper",
       period: "Sep 2021 - Jul 2022",
-      description: "Release management, migration of the translation technology for 3D modeling software."
+      description: "Release management, migration of the translation technology for 3D modeling software.",
+      skillsLogos: [
+        {
+          path: "assets/logos/technos/javascript.webp",
+          altText: "javascript icon"
+        }
+      ]
     },
     {
       company: "Dassault Systemes",
-      logoPath: "assets/logos/companies/3ds.png",
+      logoPath: "assets/logos/companies/3ds.webp",
       jobTitle: "Web Developper",
       period: "Mar 2021 - Sep 2021",
-      description: " Internship - Implemented virtual rooms with spatial sound in 3D modeling software."
+      description: " Internship - Implemented virtual rooms with spatial sound in 3D modeling software.",
+      skillsLogos: [
+        {
+          path: "assets/logos/technos/javascript.webp",
+          altText: "javascript icon"
+        }
+      ]
     },
     {
       company: "Dassault Systemes",
-      logoPath: "assets/logos/companies/3ds.png",
+      logoPath: "assets/logos/companies/3ds.webp",
       jobTitle: "Web Developper",
       period: "May 2020 - Aug 2020",
-      description: " Internship - Implemented a new 3D modeling paradigm in 3D modeling software."
+      description: " Internship - Implemented a new 3D modeling paradigm in 3D modeling software.",
+      skillsLogos: [
+        {
+          path: "assets/logos/technos/javascript.webp",
+          altText: "javascript icon"
+        }
+      ]
     }
   ]
 };
@@ -121,17 +159,17 @@ export const mockProjects: Readonly<ProjectSection> =
       title: "Portfolio",
       link: "https://github.com/SophieBatumbo/PersonnalPage",
       description: "A modern, responsive web page to showcase my experience and projects.",
-      keyPoints: ["Developed with Angular", "SASS and CSS animations", "Responsive"],
+      keyPoints: ["Developed with Angular", "SASS & CSS animations", "Ergonomic & responsive"],
       technos: [{name:"Typescript", color:"blue"}, {name:"SASS", color:"pink"}, {name:"HTML", color:"orange"}],
       forkNumber: 0,
-      size: 2.1
+      size: 1.45
     },
     {
       logoPath: "assets/icons/git-repository.svg",
-      title: "Analyco",
+      title: "Analyco UI",
       link: "https://github.com/SophieBatumbo/analyco-frontend",
       description: "A web application to manage a micro business accountability.",
-      keyPoints: ["Developed with Angular", "FastAPI for the backend endpoints", "Minimalist and ergonomic interface"],
+      keyPoints: ["Developed with Angular", "FastAPI for the backend endpoints", "Minimalist & ergonomic interface"],
       technos: [{name:"Typescript", color:"blue"}, {name:"SASS", color:"pink"}, {name:"HTML", color:"orange"}],
       forkNumber: 2,
       size: 5.3
@@ -145,6 +183,16 @@ export const mockProjects: Readonly<ProjectSection> =
       technos: [{name:"Typescript", color:"blue"}, {name:"SASS", color:"pink"}, {name:"HTML", color:"orange"}],
       forkNumber: 1600,
       size: 12.96
+    },
+    {
+      logoPath: "assets/icons/git-repository.svg",
+      title: "Analyco API",
+      link: "https://github.com/SophieBatumbo/analyco-frontend",
+      description: "Endpoints for a web application to manage a micro business accountability.",
+      keyPoints: ["Developed with Java", "REST API", "Kwarkus"],
+      technos: [{name:"Typescript", color:"blue"}, {name:"SASS", color:"pink"}, {name:"HTML", color:"orange"}],
+      forkNumber: 2,
+      size: 5.3
     }
   ]
 };
@@ -157,14 +205,9 @@ export const mockEducation: Readonly<EducationSection> = {
   },
   records: [
     {
-      diploma: 'Bac Scientifique',
-      institution: 'Lycée Alain',
-      period: '2013 - 2016'
-    },
-    {
-      diploma: 'Licence MIAGE',
-      institution: 'Nanterre university',
-      period: '2016 - 2019'
+      diploma: 'PSM1 certificate',
+      institution: 'Squad',
+      period: '2024'
     },
     {
       diploma: 'Master MIAGE',
@@ -172,16 +215,21 @@ export const mockEducation: Readonly<EducationSection> = {
       period: '2019 - 2021'
     },
     {
-      diploma: 'PSM1 certificate',
-      institution: 'Squad',
-      period: '2024'
+      diploma: 'Licence MIAGE',
+      institution: 'Nanterre university',
+      period: '2016 - 2019'
+    },
+    {
+      diploma: 'Bac Scientifique',
+      institution: 'Lycée Alain',
+      period: '2013 - 2016'
     }
   ]
 };
 
 export const mockContact: Readonly<ContactSection> = {
-  title: "Reach out to me",
-  why: "Discuss a project or just wanna say hi ?",
+  title: "Contact me",
+  why: "Discuss a project or anything else ?",
   who: "My inbox is open for all.​",
   mail: "sophie.bat@hotmail.fr",
   openToWork: true,
@@ -212,10 +260,10 @@ export const mockDownloadFile: Readonly<DownloadFile> = {
   name: 'CV_2025-02_Sophie_Batumbo.pdf'
 };
 
-export const mockNavActions: string[] = [
-  mockSkills.title, 
-  mockExperiences.title, 
-  mockProjects.title, 
-  mockEducation.title, 
-  mockContact.title
+export const mockNavActions: NavAction[] = [
+  {title: mockSkills.title, anchor: "#skills"},
+  {title: mockExperiences.title, anchor: "#workexperiences"},
+  {title: mockProjects.title, anchor: "#projects"},
+  {title: mockEducation.title, anchor: "#education"},
+  {title: mockContact.title, anchor: "#contact"}
 ];

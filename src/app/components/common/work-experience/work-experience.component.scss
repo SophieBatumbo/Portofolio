@@ -1,3 +1,5 @@
+@import "../../../../styles.scss";
+
 :host {
   display: flex;
   flex: 1 1 20%;
@@ -10,12 +12,13 @@
   height: 100%;
   border: 1px solid hsla(0,0%,83%,.397);
   border-radius: 6px;
-  box-shadow: 0 10px 30px -15px #0003;
+  //box-shadow: 0 10px 30px -15px #0003;
+  /* These comments stay in case we add interaction clicking on the experience (to show more, visualizer or numeral data ie.)*/
   flex: 0 1 100%;
 
-  &:hover {
+  /*&:hover {
     box-shadow: 0 20px 30px -10px #0003;
-  }
+  }*/
 
   &-header {
     display: flex;
@@ -43,7 +46,8 @@
       margin-right: auto;
       border-radius: 50%;
       line-height: normal;
-      box-shadow: 0 .5rem 1rem #0000004d;
+      //box-shadow: 0 .5rem 1rem #0000004d;
+      border: solid 1px #0000004d;
     }
 
     @media screen and (max-width: 760px) {
@@ -78,9 +82,22 @@
 
     .body-desc {
       padding: 0 24px;
-      color: #868e96;
+      color: $grey-dark;
       text-align: center;
       font-size: 19px;
+
+      &-skills-logos {
+        display: flex;
+        gap: 4px;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0;
+
+        &-item > img {
+          height: 24px;
+        }
+      }
 
       @media screen and (max-width: 760px) {
         font-size: 16px;

@@ -1,25 +1,15 @@
 :host {
   position: relative;
   top: 10px;
-  @media screen and (max-width: 760px) {
-    top: calc(88px + 16px + 16px);
-  }
 }
 
 main {
   display: flex;
   flex-direction: column;
-  gap: 120px;
   margin: 0;
 
   @media screen and (max-width: 760px) {
     gap: 60px;
-  }
-
-  @media screen and (min-width: 1261px) {
-    &.page-content {
-      margin-top: 80px;
-    }
   }
 }
 

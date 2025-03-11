@@ -1,14 +1,28 @@
+@import "../../../../styles.scss";
+
 button {
-  padding: 12px 16px;
-  border-radius: 6px;
+  padding: 12px 24px;
+  border-radius: 30px;
   font-size: 1.25rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   border: none;
-  background-color: lighten(#a9735b, 5%);
+  background-color: $primary-color;
   color: white;
+  display: flex;
+  gap: 8px;
 
   &:hover {
-    background-color: darken(#a9735b, 10%);
+    background-color: darken($primary-color, 10%);
+  }
+
+  &.small{
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    gap: 4px;
+
+    .icon > img {
+      height: 16px;
+    }
   }
 
   a {
@@ -17,6 +31,15 @@ button {
 
     &:visited {
       color: white;
+    }
+  }
+
+  .icon {
+    display: flex;
+
+    > img {
+      height: 24px;
+      align-self: center;
     }
   }
 }
@@ -29,5 +52,15 @@ button {
 
   button {
     flex: 1 0 100%;
+    justify-content: center;
+
+    &.small{
+      padding: 12px 16px;
+      font-size: 1.1rem;
+
+      .icon > img {
+        height: 24px;
+      }
+    }
   }
 }

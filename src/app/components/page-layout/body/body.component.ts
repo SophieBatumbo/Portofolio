@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { PresentationComponent } from "../../sections/presentation/presentation.component";
 import { DataService } from '../../../services/data.service';
 import { ContactSection, DownloadFile, EducationSection, ExperienceSection, PresentationSection, ProjectSection, SkillSection } from '../../../models/model';
@@ -26,7 +26,7 @@ import { Observable } from 'rxjs';
   templateUrl: './body.component.html',
   styleUrl: './body.component.scss'
 })
-export class BodyComponent implements OnInit {
+export class BodyComponent implements OnInit, AfterViewInit {
 
   presentationData$!: Observable<PresentationSection>;
   downloadResumeData$!: Observable<DownloadFile>;
@@ -35,6 +35,7 @@ export class BodyComponent implements OnInit {
   projectData$!: Observable<ProjectSection>;
   educationData$!: Observable<EducationSection>;
   contactData$!: Observable<ContactSection>;
+  @Output() isLoaded = new EventEmitter<boolean>();
 
   constructor (private dataService: DataService) {}
 
@@ -48,4 +49,10 @@ export class BodyComponent implements OnInit {
     this.contactData$ = this.dataService.getContactData();
   }
 
+  ngAfterViewInit() {
+    setTimeout(() =>  this.isLoaded.emit(true), 3000);
+  }
+
 }
+
+

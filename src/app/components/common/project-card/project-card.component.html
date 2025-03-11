@@ -2,12 +2,12 @@
 
     <span class="card-header">
         <img [attr.src]="logoPath" alt="project icon">
-        <h3 class="title"><a [attr.href]="link" target="_blank"> {{ title }} </a></h3>
+        <h3 class="title">{{ title }}</h3>
     </span>
 
     <section class="card-description">
-        <p>{{ description }}</p>
-        <ul>
+        <p class="card-description-text">{{ description }}</p>
+        <ul class="card-description-keypoints">
             <li *ngFor="let keyp of keyPoints">{{ keyp }}</li>
         </ul>
     </section>
@@ -26,8 +26,18 @@
                 <img src="assets/icons/code-fork.svg" alt="fork icon">
                 <p>{{  forkNumber | shortNumber }}</p>
             </section>
+
+            <p class="size">{{ size | number : '1.1-1' }}MB</p>
+
         </section>
-        <p>{{ size | number : '1.1-1' }}MB</p>
+        
+        <app-button
+        [action]="'See ' + title" 
+        [pictogramPath]="'assets/icons/external-link.png'"
+        [isExternalLink]="true"
+        [externalLink]="link"
+        [isSmall]="true"
+        ></app-button>
     </section>
 
 </section>

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { mockContact, mockDownloadFile, mockEducation, mockExperiences, mockLogoPage, mockNavActions, mockPresentation, mockProjects, mockSkills } from '../models/mockup-data';
 import { delay, Observable, of } from 'rxjs';
-import { ContactSection, DownloadFile, EducationSection, ExperienceSection, Illustration, PresentationSection, ProjectSection, SkillSection } from '../models/model';
+import { ContactSection, DownloadFile, EducationSection, ExperienceSection, Illustration, NavAction, PresentationSection, ProjectSection, SkillSection } from '../models/model';
 
 @Injectable({
   providedIn: 'root'
@@ -44,7 +44,7 @@ export class DataService {
     return this.getMockData(mockDownloadFile);
   }
 
-  getNavActions():Observable<string[]>{
+  getNavActions():Observable<NavAction[]>{
     return this.getMockData(mockNavActions);
   }
 }

@@ -1,6 +1,9 @@
+@import "../../../../styles.scss";
+
 section#presentation {
   display: flex;
   justify-content: space-evenly;
+  padding-top: 80px;
 
   .presentation {
     &-desc {
@@ -11,7 +14,7 @@ section#presentation {
       line-height: 48px;
       flex: 0 1 50%;
 
-      .title {
+      /*.title {
         img {
           width: 48px;
           transform-origin: center bottom;
@@ -24,10 +27,10 @@ section#presentation {
             100% { transform: rotate(-5deg); }
           }
         }
-      }
+      }*/
 
       .description {
-        color: #868e96; 
+        color: $grey-dark; 
       }
 
       .logos {

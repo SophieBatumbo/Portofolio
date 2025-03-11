@@ -1,3 +1,5 @@
+@import "../../../../styles.scss";
+
 :host {
   font-size: 19px;
 }
@@ -5,8 +7,7 @@
 section.contact {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  margin-bottom: 32px;
+  padding-top: 88px;
 
   .contact-content {
     display: flex;
@@ -17,9 +18,8 @@ section.contact {
   .purpose {
 
     .why {
-      text-transform: uppercase;
       font-weight: 700;
-      color: #868e96;
+      color: $grey-dark;
     }
 
     .mail {
@@ -88,9 +88,8 @@ section.contact {
 }
 
 @media screen and (max-width: 1260px) {
-  
   section.contact {
-    margin-bottom: 64px;
+    margin-bottom: 0;
     margin-right: 0;
     align-items: center;
     text-align: center;
@@ -100,4 +99,3 @@ section.contact {
     }
   }
 }
-

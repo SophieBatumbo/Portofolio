@@ -1,55 +1,55 @@
 section#education{
   display: flex;
-  flex-direction: column;
-  gap: 32px;
+  gap: 48px;
+  padding-top: 52px;
 
-  .education-body {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-evenly;
+  .illus {
+    max-width: 512px;
+    max-height: 512px;
+    height: fit-content;
+    align-self: center;
+    z-index: -1;
 
-    .illus {
-      max-width: 590px;
-      max-height: 590px;
-      height: fit-content;
-      align-self: center;
-      z-index: -1;
+    &:not(.visible) {
+      opacity: 0;
+    }
 
-      &:not(.visible) {
-        opacity: 0;
-      }
-  
-      &.visible {
-        animation-duration: 2s;
-        animation-name: fadeIn;
-        animation-fill-mode: both;
-      }
+    &.visible {
+      animation-duration: 2s;
+      animation-name: fadeIn;
+      animation-fill-mode: both;
     }
   }
 
-  @media screen and (max-width: 1770px) {
-    .education-body {
-      flex-direction: column;
-      gap: 0;
+  .education-body {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
 
-      .illus {
-        position: inherit;
-      }
+  @media screen and (max-width: 1770px) {
+    .illus {
+      position: inherit;
     }
   }
 
   @media screen and (max-width: 1260px) {
+    gap: 0;
+    flex-direction: column-reverse;
+
     h2{
       align-self: center;
+    }
+
+    .education-body {
+      gap: 24px;
     }
   }
 
   @media screen and (max-width: 760px) {
-    .education-body {
-      .illus {
-        margin-bottom: 0;
-        width: 105%;
-      }
+    .illus {
+      margin-bottom: 0;
+      width: 105%;
     }
   }
 }

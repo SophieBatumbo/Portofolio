@@ -11,17 +11,13 @@
             <div class="nav-menu-btn-burger"></div>
         </div>
     </section>
-    <section 
+    <ul 
         *ngIf="navActions" 
         class="nav-actions" 
         class="nav-actions" 
         [ngClass]="{ 'visible': isOpened, 'leave': !isOpened }" 
         tabindex="0"
     >
-        <a href="#skills" class="action"> {{ navActions.at(0) }} </a>
-        <a href="#workexperiences" class="action"> {{ navActions.at(1) }} </a>
-        <a href="#projects" class="action"> {{ navActions.at(2) }} </a>
-        <a href="#education" class="action"> {{ navActions.at(3) }} </a>
-        <a href="#contact" class="action"> {{ navActions.at(4) }} </a>
-    </section>
+        <a *ngFor="let navItem of navActions" [href]="navItem.anchor" class="nav-actions-item">{{ navItem.title }}</a>
+    </ul>
 </nav>

@@ -27,14 +27,16 @@ nav {
 
     &-actions {
       display:flex;
-      gap: 42px;
+      padding: 0;
 
-      a {
+      &-item {
         text-decoration: none;
-        color : black;
+        min-width: 116px;
+        text-align: center;
+        color: black;
 
         &:visited {
-          color : black;
+          color: black;
         }
 
         &:hover {
@@ -125,8 +127,11 @@ nav {
           flex-direction: column;
           gap: 0;
           animation: slideDown 0.5s 1;
+          margin: 0;
 
-          a {
+          .nav-actions-item {
+            min-width: auto;
+            text-align: initial;
             padding: 16px 0 ;
 
             &:nth-child(n):not(:last-child) {

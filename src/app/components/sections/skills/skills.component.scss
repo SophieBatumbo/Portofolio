@@ -1,7 +1,11 @@
+
+@import "../../../../styles.scss";
+
 .skills{
   display: flex;
   gap: 24px;
   justify-content: space-evenly;
+  padding-top: 68px;
 
   &-desc {
     display: flex;
@@ -9,7 +13,7 @@
     gap: 32px;
 
     .title {
-      margin-top: 56px;
+      padding-top: 56px;
     }
 
     .logos-and-skills-list {
@@ -21,7 +25,7 @@
     .logos {
       display: flex;
       gap: 28px;
-      justify-content: center;
+      flex-wrap: wrap;
 
       span {
         display: flex;
@@ -33,21 +37,11 @@
 
       img {
         height: 64px;
-        filter: grayscale(100%);
-
-        &:hover {
-          filter: none;
-          transform: translateY(-2px);
-
-          +figcaption {
-            font-weight: 700;
-          }
-        }
       }
 
       figcaption {
         font-size: 15px;
-        color: #868e96 ;
+        color: $grey-dark;
       }
     }
 
@@ -89,7 +83,7 @@
     gap: 6px;
     padding-left: 0;
     font-size: 19px;
-    color: #868e96;
+    color: $grey-dark;
 
     &-elem {
       &::before {
@@ -123,7 +117,7 @@
       }
 
       .logos {
-        flex-wrap: wrap;
+        gap: 28px 5%;
         justify-content: center;
       }
     }
@@ -140,6 +134,7 @@
     &-list {
       font-size: 19px;
       line-height: 24px;
+      gap: 12px;
     }
   }
 

@@ -4,7 +4,8 @@
   background-image: url('../../../../assets/layout/separator-bottom-wave.svg');
   background-repeat: no-repeat;
   background-position: bottom;
-  height: 60%;
+  width: 100%;
+  aspect-ratio: 5 / 1;
   padding: 0;
 }
 
@@ -14,28 +15,28 @@ footer {
   font-weight: 700;
   margin-bottom: 24px;
   display: flex;
-  align-items: end;
-}
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
 
-@media screen and (max-width: 1640px) {
-  :host  {
-    height: 49%;
+  .infos {
+    font-weight: 400;
   }
 }
 
 @media screen and (max-width: 1260px) {
-  :host {
-    height: 35%;
-  }
-
   footer {
     margin-bottom: 6px;
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 
 @media screen and (max-width: 760px) {
-  :host  {
-    height: 12%;
+  footer {
+    font-size: 12px;
+
+    .infos {
+      display: none;
+    }
   }
 }
