@@ -1,4 +1,3 @@
-
 <svg xmlns="http://www.w3.org/2000/svg"
      class="svg-snoweb svg-theme-light"
      x="0"
@@ -17,11 +16,11 @@
         
 
         .svg-fill-primary {
-            fill: #a9735b;
+            fill: #9d6a53;
         }
 
         .svg-fill-secondary {
-            fill: #a9735b;
+            fill: #9d6a53;
         }
 
         .svg-fill-tertiary {
@@ -29,11 +28,11 @@
         }
 
         .svg-stroke-primary {
-            stroke: #a9735b;
+            stroke: #9d6a53;
         }
 
         .svg-stroke-secondary {
-            stroke: #a9735b;
+            stroke: #9d6a53;
         }
 
         .svg-stroke-tertiary {
