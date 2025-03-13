@@ -190,9 +190,9 @@ export const mockProjects: Readonly<ProjectSection> =
       link: "https://github.com/SophieBatumbo/analyco-frontend",
       description: "Endpoints for a web application to manage a micro business accountability.",
       keyPoints: ["Java", "REST API", "Quarkus"],
-      technos: [{name:"Typescript", color:"blue"}, {name:"SASS", color:"pink"}, {name:"HTML", color:"orange"}],
+      technos: [{name:"Java", color:"brown"}],
       forkNumber: 2,
-      size: 5.3
+      size: 5.8
     }
   ]
 };
