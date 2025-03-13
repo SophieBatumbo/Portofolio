@@ -16,12 +16,13 @@
   border: none;
   padding: 12px;
   border-radius: 100px 0 0 0;
-  background: transparent;
+  background: rgb(239, 239, 239);
+  opacity: 0.8;
   cursor: pointer;
 
   &:hover {
-    background: rgb(239, 239, 239);
     transform: translateY(-2.5%);
+    opacity: 1;
   }
 
   &-icon {
