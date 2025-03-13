@@ -10,7 +10,7 @@ section#workexperiences {
     flex-wrap: wrap;
     justify-content: space-evenly;
 
-    // BEWARE : here we add css to each experience card manually,so if you add anything think to actualize here or to make a function in JS
+    // BEWARE : here we add css to each experience card manually,so if you add anything think to actualize here or to make a function in JS / directive
     > :first-child.visible {
       animation: fadeIn 1s 0s 1;
       animation-fill-mode: both;
@@ -49,8 +49,15 @@ section#workexperiences {
   }
 
   @media screen and (max-width: 760px) {
+    padding-top: 88px;
+
     .experiences {
       gap: 24px;
+
+      > .visible {
+        animation: fadeIn 1s 0s 1;
+        animation-fill-mode: both;
+      }
     }
   }
 }

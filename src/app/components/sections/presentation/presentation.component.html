@@ -1,13 +1,12 @@
-<section id="presentation" *ngIf="presentation">
-  <section class="presentation-desc" appInViewport [treshold]="0.2">
+<div id="presentation" *ngIf="presentation">
+  <div class="presentation-desc" appInViewport [treshold]="0.2">
     <section class="title-and-desc">
       <h1 class="title">
         {{ presentation.title }}
-      <!--  <img src="assets/icons/hand.svg" alt="hand icon" />-->
       </h1>
       <p class="description">{{ presentation.description }}</p>
     </section>
-    <section class="logos">
+    <div class="logos">
       <a *ngFor="let link of presentation?.links"
         [attr.href]="link.url"
         target="{{ link.targetAttribute }}"
@@ -15,8 +14,8 @@
         <img *ngIf="link.icon" [attr.src]="link.icon.path" [attr.alt]="link.icon.altText" />
         <img *ngIf="link.icon" [attr.src]="link.icon.hoverPath" [attr.alt]="link.icon.altText"/>
       </a>
-    </section>
-    <section class="buttons">
+    </div>
+    <div class="buttons">
       <app-button 
         [action]="'Contact me'" 
         [isMailTo]="true"
@@ -27,8 +26,8 @@
         [downloadFile]="downloadFile"
         [pictogramPath]="'assets/icons/download.png'"
       ></app-button>
-    </section>
-  </section>
+    </div>
+  </div>
 
   <img
     *ngIf="presentation.illustration"
@@ -38,4 +37,4 @@
     loading="eager"
     appInViewport
   />
-</section>
+</div>

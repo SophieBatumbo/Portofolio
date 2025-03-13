@@ -1,6 +1,6 @@
 <section class="contact" id="contact" *ngIf="contact" appInViewport>
   <h2>{{ contact.title }}</h2>
-  <section class="contact-content"> 
+  <div class="contact-content"> 
     <span class="purpose">
       <p class="why">{{ contact.why }}</p>
      <!-- <p class="who">{{ contact.who }}​</p>-->
@@ -21,6 +21,6 @@
         <img *ngIf="link.icon" [attr.src]="link.icon.hoverPath" [attr.alt]="link.icon.altText">
       </a>
     </span>
-  </section>
+  </div>
 </section>
 <app-notification [message]="'Mail copied successfully'"></app-notification>

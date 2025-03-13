@@ -1,20 +1,26 @@
-<section class="card-exp">
-  <section class="card-exp-header">
+<div class="card-exp">
+
+  <div class="card-exp-header">
     {{ company }}
     <img [attr.src]="logoPath" alt="company logo" loading="lazy">
-  </section>
-  <section class="card-exp-body">
-    <section class="body-header">
+  </div>
+
+  <div class="card-exp-body">
+
+    <div class="body-header">
       <span>{{ jobTitle }}</span>
       <span>{{ period }}</span>
-    </section>
-    <section class="body-desc">
+    </div>
+
+    <div class="body-desc">
       <p>{{ description }}</p>
       <ul *ngIf="skillsLogos" class="body-desc-skills-logos">
         <li *ngFor="let logo of skillsLogos" class="body-desc-skills-logos-item">
           <img [src]="logo.path" [alt]="logo.altText" loading="lazy">
        </li>
       </ul>
-    </section>
-  </section>
-</section>
+    </div>
+
+  </div>
+
+</div>

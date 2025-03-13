@@ -1,10 +1,10 @@
-<app-navbar 
-  [logo]="navLogo$ | async" 
-  [navActions]="navActions$ | async"
-></app-navbar>
-<app-body  
-  (isLoaded)="updateBodyStatus($event)"
-></app-body>
-<app-footer 
-  *ngIf="isBodyLoaded"
-></app-footer>
+<app-loader *ngIf="loaderService.isLoading(); else content"></app-loader>
+
+<ng-template #content>
+  <app-navbar 
+    [logo]="navLogo$ | async" 
+    [navActions]="navActions$ | async"
+  ></app-navbar>
+  <app-body class="page-body"></app-body>
+  <app-footer></app-footer>
+</ng-template>

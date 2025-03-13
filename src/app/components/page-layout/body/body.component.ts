@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PresentationComponent } from "../../sections/presentation/presentation.component";
 import { DataService } from '../../../services/data.service';
 import { ContactSection, DownloadFile, EducationSection, ExperienceSection, PresentationSection, ProjectSection, SkillSection } from '../../../models/model';
@@ -9,24 +9,28 @@ import { EducationComponent } from '../../sections/education/education.component
 import { ContactComponent } from "../../sections/contact/contact.component";
 import { AsyncPipe, NgIf } from '@angular/common';
 import { Observable } from 'rxjs';
+import { ScrollDownComponent } from '../../common/scroll-down/scroll-down.component';
+import { BackToTopComponent } from '../../common/back-to-top/back-to-top.component';
 
 @Component({
   selector: 'app-body',
   standalone: true,
   imports: [
     PresentationComponent, 
+    ScrollDownComponent,
     ExperienceComponent, 
     SkillsComponent, 
     ProjectsComponent, 
     EducationComponent, 
     ContactComponent,
+    BackToTopComponent,
     AsyncPipe,
     NgIf
   ],
   templateUrl: './body.component.html',
   styleUrl: './body.component.scss'
 })
-export class BodyComponent implements OnInit, AfterViewInit {
+export class BodyComponent implements OnInit {
 
   presentationData$!: Observable<PresentationSection>;
   downloadResumeData$!: Observable<DownloadFile>;
@@ -35,7 +39,6 @@ export class BodyComponent implements OnInit, AfterViewInit {
   projectData$!: Observable<ProjectSection>;
   educationData$!: Observable<EducationSection>;
   contactData$!: Observable<ContactSection>;
-  @Output() isLoaded = new EventEmitter<boolean>();
 
   constructor (private dataService: DataService) {}
 
@@ -47,10 +50,6 @@ export class BodyComponent implements OnInit, AfterViewInit {
     this.projectData$ = this.dataService.getProjectsData();
     this.educationData$ = this.dataService.getEducationData();
     this.contactData$ = this.dataService.getContactData();
-  }
-
-  ngAfterViewInit() {
-    setTimeout(() =>  this.isLoaded.emit(true), 3000);
   }
 
 }

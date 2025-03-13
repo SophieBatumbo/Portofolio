@@ -1,16 +1,10 @@
-:host {
-  position: relative;
-  top: 10px;
-}
-
 main {
   display: flex;
   flex-direction: column;
   margin: 0;
 
-  @media screen and (max-width: 760px) {
-    gap: 60px;
-  }
+  animation: popIn 1s 1s 1; 
+  animation-fill-mode: both;
 }
 
 .page-title {

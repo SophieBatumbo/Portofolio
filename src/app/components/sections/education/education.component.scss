@@ -1,4 +1,4 @@
-section#education{
+div#education{
   display: flex;
   gap: 48px;
   padding-top: 52px;
@@ -36,8 +36,9 @@ section#education{
   @media screen and (max-width: 1260px) {
     gap: 0;
     flex-direction: column-reverse;
+    padding-top: 100px;
 
-    h2{
+    h2 {
       align-self: center;
     }
 
@@ -47,6 +48,8 @@ section#education{
   }
 
   @media screen and (max-width: 760px) {
+    padding-top: 80px;
+
     .illus {
       margin-bottom: 0;
       width: 105%;

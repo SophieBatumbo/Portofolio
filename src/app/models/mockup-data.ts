@@ -1,7 +1,7 @@
 import { ContactSection, DownloadFile, EducationSection, ExperienceSection, Illustration, NavAction, PresentationSection, ProjectSection, SkillSection } from "./model";
 
 export const mockLogoPage: Readonly<Illustration> = {
-  path: "assets/layout/logo.png",
+  path: "assets/layout/logo.webp",
   altText: "Page logo"
 };
 
@@ -169,7 +169,7 @@ export const mockProjects: Readonly<ProjectSection> =
       title: "Analyco UI",
       link: "https://github.com/SophieBatumbo/analyco-frontend",
       description: "A web application to manage a micro business accountability.",
-      keyPoints: ["Developed with Angular", "FastAPI for the backend endpoints", "Minimalist & ergonomic interface"],
+      keyPoints: ["Angular and PrimeNG", "REST API endpoints", "JWT authentication"],
       technos: [{name:"Typescript", color:"blue"}, {name:"SASS", color:"pink"}, {name:"HTML", color:"orange"}],
       forkNumber: 2,
       size: 5.3
@@ -179,7 +179,7 @@ export const mockProjects: Readonly<ProjectSection> =
       title: "NgBootstrap",
       link: "https://github.com/SophieBatumbo/ng-bootstrap",
       description: "An open source design system fit for Angular projects.",
-      keyPoints: ["Uses only Angular and Bootstrap for styling", "Downloaded 500 000/month by developers", "Does not require jQuery"],
+      keyPoints: ["Angular and Bootstrap", "Downloaded 500 000/month", "Does not require jQuery"],
       technos: [{name:"Typescript", color:"blue"}, {name:"SASS", color:"pink"}, {name:"HTML", color:"orange"}],
       forkNumber: 1600,
       size: 12.96
@@ -189,7 +189,7 @@ export const mockProjects: Readonly<ProjectSection> =
       title: "Analyco API",
       link: "https://github.com/SophieBatumbo/analyco-frontend",
       description: "Endpoints for a web application to manage a micro business accountability.",
-      keyPoints: ["Developed with Java", "REST API", "Kwarkus"],
+      keyPoints: ["Java", "REST API", "Quarkus"],
       technos: [{name:"Typescript", color:"blue"}, {name:"SASS", color:"pink"}, {name:"HTML", color:"orange"}],
       forkNumber: 2,
       size: 5.3

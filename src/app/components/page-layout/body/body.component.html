@@ -12,6 +12,7 @@
             [presentation]="data.presentation" 
             [downloadFile]="data.downloadFile" >
         </app-presentation>
+        <app-scroll-down></app-scroll-down>
         <app-skills class="skills" [skills]="data.skills"></app-skills>
         <app-work-experience class="work-experiences" 
             [experienceSection]="data.experience">
@@ -23,5 +24,6 @@
             [education]="data.education">
         </app-education>
         <app-contact [contact]="data.contact" class="contact-section" ></app-contact>
+        <app-back-to-top></app-back-to-top>
     </ng-container>
 </main>

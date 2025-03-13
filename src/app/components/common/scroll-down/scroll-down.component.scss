@@ -1,0 +1,31 @@
+@import "../../../../styles.scss";
+
+a {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 4px;
+  align-items: center;
+  text-decoration: none;
+
+  animation: fadeIn 1s 1s 1; 
+  animation-fill-mode: both;
+
+  .title {
+    font-weight: bold;
+    font-size: 0.7rem;
+    text-transform: capitalize;
+    color: $grey-dark;
+  }
+
+  .icon {
+    width: 50px;
+  }
+
+  &:visited {
+    color: $grey-dark;
+  }
+
+  @media screen and (max-width: 1260px) {
+    display: none;
+  }
+}

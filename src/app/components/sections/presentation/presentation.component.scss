@@ -1,9 +1,9 @@
 @import "../../../../styles.scss";
 
-section#presentation {
+div#presentation {
   display: flex;
   justify-content: space-evenly;
-  padding-top: 80px;
+  padding-top: 112px;
 
   .presentation {
     &-desc {
@@ -13,21 +13,6 @@ section#presentation {
       font-size: 30px;
       line-height: 48px;
       flex: 0 1 50%;
-
-      /*.title {
-        img {
-          width: 48px;
-          transform-origin: center bottom;
-          animation: wave 1s cubic-bezier(0.42, 0, 0.58, 1) infinite;
-
-          @keyframes wave {
-            0% { transform: rotate(0deg); }
-            33% { transform: rotate(5deg); }
-            66% { transform: rotate(0deg); }
-            100% { transform: rotate(-5deg); }
-          }
-        }
-      }*/
 
       .description {
         color: $grey-dark; 
@@ -58,16 +43,6 @@ section#presentation {
             }
           }
         }
-      }
-
-      &:not(.visible) {
-        transform: translateX(-100%);
-      }
-  
-      &.visible {
-        animation-duration: 2s;
-        animation-name: slideInFromLeft;
-        animation-fill-mode: both;
       }
     }
 
@@ -100,10 +75,6 @@ section#presentation {
       &-desc {
         align-items: center;
 
-        &:not(.visible) {
-          transform: translateX(-50%) ;
-        }
-
         .title, .description {
           text-align: center;
         }
@@ -122,12 +93,8 @@ section#presentation {
         line-height: 32px;
         margin-top: -16px;
 
-        .title {
-
-          img {
-            width: 32px;
-            margin-left: 6px;
-          }
+        &.visible {
+          animation: none;
         }
 
         .buttons {
@@ -136,8 +103,8 @@ section#presentation {
       }
 
       &-illus {
-        max-width: 350px;
-        max-height: 350px;
+        max-width: 365px;
+        max-height: 365px;
       }
     }
 

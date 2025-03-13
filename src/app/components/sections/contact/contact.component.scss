@@ -76,10 +76,6 @@ section.contact {
     }
   }
 
-  &:not(.visible) {
-    transform: translateY(17%);
-  }
-
   &.visible {
     animation-duration: 2s;
     animation-name: slideUp;

@@ -1,0 +1,43 @@
+@import "../../../../styles.scss";
+
+:host {
+  display: flex;
+  justify-content: end;
+  position: sticky;
+  bottom: 60px;
+}
+
+.scroll-top-button {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  width: 124px;
+  border: none;
+  padding: 12px;
+  border-radius: 100px 0 0 0;
+  background: transparent;
+  cursor: pointer;
+
+  &:hover {
+    background: rgb(239, 239, 239);
+    transform: translateY(-2.5%);
+  }
+
+  &-icon {
+    width: 32px;
+  }
+
+  &-legend {
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: $grey-dark;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .scroll-top-button {
+    background: rgb(239, 239, 239);
+  }
+}

@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">91.66% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>14/14</span>
+                <span class='fraction'>11/12</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>14/14</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
@@ -114,7 +114,14 @@
 <a name='L49'></a><a href='#L49'>49</a>
 <a name='L50'></a><a href='#L50'>50</a>
 <a name='L51'></a><a href='#L51'>51</a>
-<a name='L52'></a><a href='#L52'>52</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -146,26 +153,33 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component, OnInit } from '@angular/core';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { AfterViewInit, Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { PresentationComponent } from "../../sections/presentation/presentation.component";
 import { DataService } from '../../../services/data.service';
 import { ContactSection, DownloadFile, EducationSection, ExperienceSection, PresentationSection, ProjectSection, SkillSection } from '../../../models/model';
@@ -175,7 +189,7 @@ import { ProjectsComponent } from "../../sections/projects/projects.component";
 import { EducationComponent } from '../../sections/education/education.component';
 import { ContactComponent } from "../../sections/contact/contact.component";
 import { AsyncPipe, NgIf } from '@angular/common';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 &nbsp;
 @Component({
   selector: 'app-body',
@@ -193,15 +207,16 @@ import { Observable, of } from 'rxjs';
   templateUrl: './body.component.html',
   styleUrl: './body.component.scss'
 })
-export class BodyComponent implements OnInit {
+export class BodyComponent implements OnInit, AfterViewInit {
 &nbsp;
   presentationData$!: Observable&lt;PresentationSection&gt;;
   downloadResumeData$!: Observable&lt;DownloadFile&gt;;
-  skillsData$: Observable&lt;SkillSection&gt; = of();
-  experienceData$: Observable&lt;ExperienceSection&gt; = of();
-  projectData$: Observable&lt;ProjectSection&gt; = of();
-  educationData$: Observable&lt;EducationSection&gt; = of();
-  contactData$: Observable&lt;ContactSection&gt; = of();
+  skillsData$!: Observable&lt;SkillSection&gt;;
+  experienceData$!: Observable&lt;ExperienceSection&gt;;
+  projectData$!: Observable&lt;ProjectSection&gt;;
+  educationData$!: Observable&lt;EducationSection&gt;;
+  contactData$!: Observable&lt;ContactSection&gt;;
+  @Output() isLoaded = new EventEmitter&lt;boolean&gt;();
 &nbsp;
   constructor (private dataService: DataService) {}
 &nbsp;
@@ -215,7 +230,13 @@ export class BodyComponent implements OnInit {
     this.contactData$ = this.dataService.getContactData();
   }
 &nbsp;
+  ngAfterViewInit() {
+    setTimeout(<span class="fstat-no" title="function not covered" >() =</span>&gt;  <span class="cstat-no" title="statement not covered" >this.isLoaded.emit(true),</span> 3000);
+  }
+&nbsp;
 }
+&nbsp;
+&nbsp;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -223,7 +244,7 @@ export class BodyComponent implements OnInit {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-03-03T17:00:41.679Z
+                at 2025-03-11T01:54:29.010Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

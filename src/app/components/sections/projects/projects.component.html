@@ -1,7 +1,7 @@
 <section id="projects" *ngIf="projectSection" >
   <h2 class="title">{{ projectSection.title }}</h2>
-  <section class="projects">
-    <section class="projects-desc">
+  <div class="projects">
+    <div class="projects-desc">
       <app-card *ngFor="let card of projectSection?.projects" 
       [logoPath]="card.logoPath" 
       [title]="card.title"
@@ -11,12 +11,12 @@
       [technos]="card.technos" 
       [forkNumber]="card.forkNumber" 
       [size]="card.size" appInViewport></app-card>
-    </section>
+    </div>
     <img *ngIf="projectSection.illustration" class="projects-illus" 
       [attr.src]="projectSection.illustration.path" 
       [attr.alt]="projectSection.illustration.altText" 
       loading="eager" 
       appInViewport
     >
-  </section>
+  </div>
 </section>

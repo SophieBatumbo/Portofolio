@@ -1,35 +1,36 @@
-<section class="card">
+<div class="card">
 
     <span class="card-header">
         <img [attr.src]="logoPath" alt="project icon">
         <h3 class="title">{{ title }}</h3>
     </span>
 
-    <section class="card-description">
+    <div class="card-description">
         <p class="card-description-text">{{ description }}</p>
         <ul class="card-description-keypoints">
             <li *ngFor="let keyp of keyPoints">{{ keyp }}</li>
         </ul>
-    </section>
+    </div>
 
-    <section class="card-technical-infos">
-        <section class="infos">
+    <div class="card-technical-infos">
 
-            <section class="techs">
-                <section class="tech" *ngFor="let techno of technos">
-                    <section class="badge {{ techno.color }}"></section>
+        <div class="infos">
+
+            <div class="techs">
+                <div class="tech" *ngFor="let techno of technos">
+                    <span class="badge {{ techno.color }}"></span>
                     <p>{{ techno.name }}</p>
-                </section>
-            </section>
+                </div>
+            </div>
 
-            <section class="fork">
+            <div class="fork">
                 <img src="assets/icons/code-fork.svg" alt="fork icon">
                 <p>{{  forkNumber | shortNumber }}</p>
-            </section>
+            </div>
 
             <p class="size">{{ size | number : '1.1-1' }}MB</p>
 
-        </section>
+        </div>
         
         <app-button
         [action]="'See ' + title" 
@@ -38,6 +39,6 @@
         [externalLink]="link"
         [isSmall]="true"
         ></app-button>
-    </section>
+    </div>
 
-</section>
+</div>

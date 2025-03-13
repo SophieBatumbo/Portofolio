@@ -1,4 +1,4 @@
-<section *ngIf="education" class="education" id="education">
+<div *ngIf="education" class="education" id="education">
   <img 
     *ngIf="education.illustration" 
     class="illus" 
@@ -11,4 +11,4 @@
     <h2>{{ education.title }}</h2>
     <app-timeline [education]="education.records"></app-timeline>
   </section>
-</section>
+</div>

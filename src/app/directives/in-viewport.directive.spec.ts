@@ -1,5 +1,5 @@
-import { ElementRef, Renderer2 } from '@angular/core';
-import { InViewportDirective } from './in-viewport.directive';
+//import { ElementRef, Renderer2 } from '@angular/core';
+//import { InViewportDirective } from './in-viewport.directive';
 
 /*describe('InViewportDirective', () => {
   let testElement: HTMLElement;

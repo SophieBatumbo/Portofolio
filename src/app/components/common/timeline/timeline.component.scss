@@ -12,13 +12,25 @@
   }
 
   &:not(.visible) {
-    transform: translateY(17%);
+    transform: translateY(0%);
   }
 
   &.visible {
     animation-duration: 2s;
     animation-name: slideUp;
     animation-fill-mode: both;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .timeline {
+    &:not(.visible) {
+      transform: translateY(8%);
+    }
+  
+    &.visible {
+      animation-duration: 1s;
+    }
   }
 }
 

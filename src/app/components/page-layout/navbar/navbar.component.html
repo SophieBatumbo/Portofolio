@@ -1,5 +1,5 @@
-<nav>
-    <section class="nav-logo">
+<nav appClickOutside (outsideClick)="toggleMenu()">
+    <div class="nav-logo">
         <a href="#presentation" *ngIf="logo">
             <img [attr.src]="logo.path" [attr.alt]="logo.altText">
         </a>
@@ -10,7 +10,7 @@
             tabindex="0">
             <div class="nav-menu-btn-burger"></div>
         </div>
-    </section>
+    </div>
     <ul 
         *ngIf="navActions" 
         class="nav-actions" 
@@ -18,6 +18,9 @@
         [ngClass]="{ 'visible': isOpened, 'leave': !isOpened }" 
         tabindex="0"
     >
-        <a *ngFor="let navItem of navActions" [href]="navItem.anchor" class="nav-actions-item">{{ navItem.title }}</a>
+        <a *ngFor="let navItem of navActions" 
+            [href]="navItem.anchor" 
+            (click)="toggleMenu()"
+            class="nav-actions-item">{{ navItem.title }}</a>
     </ul>
 </nav>

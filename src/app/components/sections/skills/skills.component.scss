@@ -5,7 +5,7 @@
   display: flex;
   gap: 24px;
   justify-content: space-evenly;
-  padding-top: 68px;
+  padding-top: 80px;
 
   &-desc {
     display: flex;
@@ -47,7 +47,6 @@
 
     &:not(.visible) {
       opacity: 0;
-      transform: translateX(100%);
     }
 
     &.visible {
@@ -64,10 +63,6 @@
     max-height: 600px;
     height: fit-content;
     align-self: center;
-
-    &:not(.visible) {
-      transform: translateX(-100%);
-    }
 
     &.visible {
       animation-duration: 2s;
@@ -107,6 +102,7 @@
   @media screen and (max-width: 1260px) {
     flex-direction: column-reverse;
     gap: 0;
+    padding-top: 44px;
 
     &-desc {
       height: auto;
@@ -139,16 +135,40 @@
   }
 
   @media screen and (max-width: 760px) {
+    padding-top: 0;
+
     &-desc {
+
+      &:not(.visible) {
+        transform: translateX(0%);
+      }
+  
+      &.visible {
+        animation: none;
+      }
+      
+      .title {
+        padding-top: 80px;
+      }
+
       .logos {
         img {
           filter: none;
+          height: 48px;
         }
       }
     }
 
     &-illus {
-      width: 115%;
+      width: 110%;
+
+      &:not(.visible) {
+        transform: translateX(0%);
+      }
+  
+      &.visible {
+        animation: none;
+      }
     }
 
     &-list {
