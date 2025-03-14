@@ -1,4 +1,4 @@
-![A preview](https://github.com/SophieBatumbo/Portofolio/blob/main/src/assets/layout/preview.webm)
+![A preview](https://github.com/SophieBatumbo/Portofolio/blob/main/src/assets/layout/preview.webp)
 
 # Personal portofolio web page
 > [sophiebatumbo.github.io/Portofolio](https://sophiebatumbo.github.io/Portofolio/)
