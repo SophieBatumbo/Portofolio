@@ -1,11 +1,13 @@
 ![A preview](https://github.com/SophieBatumbo/Portofolio/blob/main/src/assets/layout/preview.webp)
 
-# Personal portofolio web page
+# Personal Portofolio 
 > [sophiebatumbo.github.io/Portofolio](https://sophiebatumbo.github.io/Portofolio/)
 
 - **Framework**: [Angular17](https://angular.io/)
 - **Styling**: [SCSS](https://sass-lang.com/)
-- **Inspiration**: [Portofolio](https://developerfolio.js.org/)
+- **Inspirations**: 
+  - [Portofolio React](https://developerfolio.js.org/)
+  - [Portofolio Angular](https://github.com/nirajprakash/nirajprakash.github.io)
 
 # Project Overview
 
@@ -24,6 +26,8 @@
 ✔️ Education \
 ✔️ Contact me
 
+# Make it yours
+
 ## Running Locally
 
 ```bash
@@ -32,7 +36,7 @@ $ npm install
 $ npm start
 ```
 
-## Modify data to make it yours
+## Modify data with yours
 Update `/src/app/models/mockup-data.ts` file.
 
 ## Update github page
