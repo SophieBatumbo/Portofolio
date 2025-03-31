@@ -257,7 +257,7 @@ export const mockContact: Readonly<ContactSection> = {
 
 export const mockDownloadFile: Readonly<DownloadFile> = {
   url: 'assets/resume.pdf',
-  name: 'CV_2025-02_Sophie_Batumbo.pdf'
+  name: 'CV_2025-04_Sophie_Batumbo.pdf'
 };
 
 export const mockNavActions: NavAction[] = [

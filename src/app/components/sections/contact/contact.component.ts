@@ -17,7 +17,7 @@ export class ContactComponent {
 
   @Input({required: true}) contact!: ContactSection | null;
 
-  copyMail() {
+  copyMailNotif() {
     const elemToCopy = document.querySelector(".purpose .mail p")!.textContent;
     if(elemToCopy) {
       navigator.clipboard.writeText(elemToCopy);
