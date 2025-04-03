@@ -187,7 +187,7 @@ export const mockProjects: Readonly<ProjectSection> =
     {
       logoPath: "assets/icons/git-repository.svg",
       title: "Analyco API",
-      link: "https://github.com/SophieBatumbo/analyco-frontend",
+      link: "https://github.com/yupay-engineering/analyco-backend",
       description: "Endpoints for a web application to manage a micro business accountability.",
       keyPoints: ["Java", "REST API", "Quarkus"],
       technos: [{name:"Java", color:"brown"}],
