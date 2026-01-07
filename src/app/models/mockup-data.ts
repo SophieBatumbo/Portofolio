@@ -67,6 +67,20 @@ export const mockExperiences: Readonly<ExperienceSection> = {
   title: "Experiences",
   experiences: [
     {
+      company: "Makitizy",
+      logoPath: "assets/logos/companies/tp.webp",
+      jobTitle: "Web Developper",
+      period: "Jun 2025 - Today",
+      description: "Development of a web product, mockups implementation with UX/UI designers.",
+      skillsLogos: [
+        {path: "assets/logos/technos/angular.webp", altText:"Angular logo"}, 
+        {path: "assets/logos/technos/html.webp", altText:"HTML5 logo"}, 
+        {path: "assets/logos/technos/css.webp", altText:"CSS3 logo"}, 
+        {path: "assets/logos/technos/sass.webp", altText:"SASS logo"}, 
+        {path: "assets/logos/technos/github.webp", altText:"GitHub logo"},
+      ]
+    },
+    {
       company: "CMA CGM",
       logoPath: "assets/logos/companies/cma.webp",
       jobTitle: "Web Developper",
@@ -257,7 +271,7 @@ export const mockContact: Readonly<ContactSection> = {
 
 export const mockDownloadFile: Readonly<DownloadFile> = {
   url: 'assets/resume.pdf',
-  name: 'CV_2025-04_Sophie_Batumbo.pdf'
+  name: 'CV_2026-01_Sophie_Batumbo.pdf'
 };
 
 export const mockNavActions: NavAction[] = [
